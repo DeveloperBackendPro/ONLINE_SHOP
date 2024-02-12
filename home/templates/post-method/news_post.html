@@ -1,0 +1,93 @@
+{% load static %}
+{% load i18n %}
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog success-madal modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-check" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">{% trans "Great !"%}</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: #1f6200;">{% trans "Your comment has been sent. Thank you !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ErrorModal" class="modal fade">
+    <div class="modal-dialog error-modal modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-exclamation-triangle" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">No !</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: red;">{% trans "Your comment has not been sent !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById('p-form');
+        if (form){
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const news = document.getElementById('news');
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const comment = document.getElementById('comment');
+            const rate = document.querySelectorAll('.rate');
+            let selectedRate;
+            rate.forEach((radio) => {
+                if (radio.checked) {
+                    selectedRate = radio.value;
+                }
+            });
+            const csrf = document.getElementsByName('csrfmiddlewaretoken');
+            const url = 'http://127.0.0.1:8000/Comment_to_News/';
+            const news_comment = new FormData();
+            news_comment.append('csrfmiddlewaretoken', csrf[0].value);
+            news_comment.append('news', news.value);
+            news_comment.append('name', name.value);
+            news_comment.append('phone', phone.value);
+            news_comment.append('comment', comment.value);
+            news_comment.append('rate', selectedRate);
+            try {
+                const response = await axios.post(url, news_comment, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+                if (response.status === 201) {
+                    if ('#exampleModalCenter') {
+                        $('#exampleModalCenter').modal('hide');
+                    }
+                    console.log(response.data);
+                    setTimeout(() => {
+                        $('#myModal').modal('show');
+                        name.value = '';
+                        phone.value = '';
+                        comment.value = '';
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#myModal').modal('hide');
+                        window.location.reload()
+                    }, 3500);
+                }
+            } catch (error) {
+                if (error.response.status === 400) {
+                    setTimeout(() => {
+                        $('#ErrorModal').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#ErrorModal').modal('hide');
+                    }, 3500);
+                }
+            }
+        });}
+    });
+</script>

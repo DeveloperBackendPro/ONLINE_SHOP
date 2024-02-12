@@ -1,0 +1,39 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>Online Test</title>
+		<link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}"/>
+		<link rel="stylesheet" href="{% static 'coming-son/assets/css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'coming-son/assets/plugins/fontawesome/css/fontawesome.min.css'%}">
+		<link rel="stylesheet" href="{% static 'coming-son/assets/plugins/fontawesome/css/all.min.css'%}">
+		<link rel="stylesheet" href="{% static 'coming-son/assets/css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/document/styles/style.css'%}">
+	</head>
+    <body class="error-page" style="background-color: #221446;" oncontextmenu="return false;">
+        <div class="main-wrapper">
+            <div class="space" style="width: 100%; height: 1px;">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+			<div class="error-box">
+				<div class="error-logo">
+					<a href="#">
+                        <h1 style="font-family: Georgia, serif; color: paleturquoise;">Online Test</h1>
+                    </a>
+				</div>
+				<div class="error-box-img">
+					<img src="{% static 'coming-son/assets/img/error.png'%}" alt="" class="img-fluid" >
+				</div>
+			</div>
+        </div>
+		<script src="{% static 'coming-son/assets/js/jquery-3.6.0.min.js'%}"></script>
+		<script src="{% static 'coming-son/assets/js/bootstrap.bundle.min.js'%}"></script>
+		<script src="{% static 'coming-son/assets/js/script.js'%}"></script>
+	</body>
+</html>

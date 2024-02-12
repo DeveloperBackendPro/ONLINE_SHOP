@@ -1,0 +1,491 @@
+{% load static %}
+{% load i18n %}
+{% if info %}
+{% for info in info %}
+{% if info.status == 'Open' %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/main.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/product_detail.css'%}">
+</head>
+<body class="template-blog belle" oncontextmenu="return false;">
+<div class="pageWrapper">
+    {#HEADER START#}
+    <div class="pageWrapper">
+        <div class="top-header">
+            <div class="container product-container">
+                <div class="row">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <p class="phone-no"><i class="anm anm-phone"></i> {{ info.phone }}</p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                        <div class="text-center"><p class="top-header_middle-text">{% trans " Worldwide Express Shipping"%}</p></div>
+                    </div>
+                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                        <ul class="customer-links list-inline">
+                            <li>
+                                <div class="language-dropdown">
+                                    <span class="language-dd">{% trans "Language"%}</span>
+                                    <ul class="text-center" id="language" style="width: 100%; font-size: 16px;">
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/uz/news_detail/{{ news.code }}/'" style="cursor: pointer;">Uzb</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/en/news_detail/{{ news.code }}/'" style="cursor: pointer;">Eng</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/news_detail/{{ news.code }}/'" style="cursor: pointer;">Rus</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a onclick="window.location.href='{% url 'login_form'%}'" style="cursor: pointer;">{% trans "Login"%}</a></li>
+                            {% if user.is_authenticated and user.is_client %}
+                                <li><a onclick="window.location.href='{% url 'client'%}'" style="cursor: pointer;">{{ user.username }}</a></li>
+                            {% else %}
+                                <li><a onclick="window.location.href='{% url 'register'%}'" style="cursor: pointer;">{% trans "Create Account"%}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap animated d-flex border-bottom">
+            <div class="container product-container">
+                <div class="row align-items-center">
+                    <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                        <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                            <img src="{% static 'logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                        </a>
+                    </div>
+                    <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                        <div class="d-block d-lg-none">
+                            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                                <i class="anm anm-bars-r" style="color: black;"></i>
+                            </button>
+                        </div>
+                        <nav class="grid__item" id="AccessibleNav">
+                            <ul id="siteNav" class="site-nav medium center hidearrow">
+                                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                {% if category %}
+                                <li class="lvl1 parent dropdown"><a>{% trans "Category"%}<i class="anm anm-angle-down-l"></i></a>
+                                    <ul class="dropdown">
+                                        {% for rs in category %}
+                                        <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" class="site-nav" style="cursor: pointer;">{{ rs.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                {% endif %}
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}<i class="anm anm-angle-down-l"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                        <div class="logo">
+                            <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                                <img src="{% static 'assets/images/logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                        <div class="site-cart">
+                            {% if user.is_authenticated and user.is_client %}
+                                <a onclick="window.location.href='{% url 'shopcart'%}'" style="cursor: pointer;" title="Cart">
+                                    <i class="icon anm anm-bag-l" style="font-size: 22px;"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="site-header__search">
+                            <button onclick="window.location.href='{% url 'search'%}'" type="button" class="search-trigger" style="cursor: pointer;"><i class="icon anm anm-search-l"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav-wrapper" role="navigation">
+            <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i>{% trans "Close Menu"%}</div>
+            <ul id="MobileNav" class="mobile-nav">
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}</a></li>
+                <li class="lvl1 parent megamenu"><a>{% trans "Category"%}<i class="anm anm-plus-l"></i></a>
+                    {% if category %}
+                       <ul>
+                          {% for rs in category %}
+                          <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" style="cursor: pointer;" class="site-nav">{{ rs.title }}</a></li>
+                          {% endfor %}
+                       </ul>
+                    {% endif %}
+                </li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}</a></li>
+                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {#HEADER END#}
+    {% if news %}
+    <div id="page-content">
+        <br>
+        <div class="container product-container">
+        	<div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                    <div class="blog--list-view">
+                    	<div class="article">
+                            <p>{{ news.description | safe }}</p>
+                            <div class="social-sharing">
+                                <a target="_blank" onclick="window.location.href='{{ info.facebook }}'" class="btn btn--small btn--secondary btn--share share-facebook" title="Facebook">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i> <span class="share-title" aria-hidden="true">Facebook</span>
+                                </a>
+                                <a target="_blank" onclick="window.location.href='{{ info.instagram }}'" class="btn btn--small btn--secondary btn--share share-twitter" title="Instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i> <span class="share-title" aria-hidden="true">Instagram</span>
+                                </a>
+                                <a onclick="window.location.href='{{ info.youtube }}'" title="Youtube" class="btn btn--small btn--secondary btn--share" >
+                                    <i class="fa fa-youtube" aria-hidden="true"></i> <span class="share-title" aria-hidden="true">Youtube</span>
+                                </a>
+                                <a target="_blank" onclick="window.location.href='{{ info.telegram }}'" class="btn btn--small btn--secondary btn--share share-pinterest" title="Telegram">
+                                    <i class="fa fa-telegram" aria-hidden="true"></i> <span class="share-title" aria-hidden="true">Telegram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if news_comment %}
+            <hr>
+            <div id="tab2" class="tab-content">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 option-one" style="padding-top: 10px;">
+                        <div class="ratings-main">
+                            <div class="avg-rating d-flex-center mb-3">
+                                <h4 class="avg-mark" style="color: #2f415d;">{{ news.count_news_rate | stringformat:".1f" }}</h4>
+                                <div class="avg-content ms-3" style="margin-left: 20px;">
+                                    <p class="text-rating" style="color: black;">{% trans "Average Rating"%}</p>
+                                    <div class="ratings-full product-review">
+                                        <a class="reviewLink d-flex-center">
+                                            <i class="icon anm anm-star{% if news.count_news_rate < 1 %}-o {% endif %}"></i>
+                                            <i class="icon anm anm-star{% if news.count_news_rate < 2 %}-o {% endif %}"></i>
+                                            <i class="icon anm anm-star{% if news.count_news_rate < 3 %}-o {% endif %}"></i>
+                                            <i class="icon anm anm-star{% if news.count_news_rate < 4 %}-o {% endif %}"></i>
+                                            <i class="icon anm anm-star{% if news.count_news_rate < 5 %}-o {% endif %}"></i>
+                                            <span class="caption ms-2" style="margin-left: 10px;">{{ news.count_news }} {% trans "Comments"%}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ratings-list">
+                                <div class="ratings-container d-flex align-items-center mt-1">
+                                    <div class="ratings-full product-review m-0">
+                                        <a class="reviewLink d-flex align-items-center" href="#">
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                        </a>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_news_5 | floatformat:0 }}%;"></div></div>
+                                    <div class="progress-value">{{ only_news_5 | floatformat:0 }}%</div>
+                                </div>
+                                <div class="ratings-container d-flex align-items-center mt-1">
+                                    <div class="ratings-full product-review m-0">
+                                        <a class="reviewLink d-flex align-items-center">
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                        </a>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_news_4 | floatformat:0 }}%;"></div>
+                                    </div>
+                                    <div class="progress-value">{{ only_news_4 | floatformat:0 }}%</div>
+                                </div>
+                                <div class="ratings-container d-flex align-items-center mt-1">
+                                    <div class="ratings-full product-review m-0">
+                                        <a class="reviewLink d-flex align-items-center">
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                        </a>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_news_3 | floatformat:0 }}%;"></div>
+                                    </div>
+                                    <div class="progress-value">{{ only_news_3 | floatformat:0 }}%</div>
+                                </div>
+                                <div class="ratings-container d-flex align-items-center mt-1">
+                                    <div class="ratings-full product-review m-0">
+                                        <a class="reviewLink d-flex align-items-center">
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                        </a>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_news_2 | floatformat:0 }}%;"></div>
+                                    </div>
+                                    <div class="progress-value">{{ only_news_2 | floatformat:0 }}%</div>
+                                </div>
+                                <div class="ratings-container d-flex align-items-center mt-1">
+                                    <div class="ratings-full product-review m-0">
+                                        <a class="reviewLink d-flex align-items-center">
+                                            <i class="icon anm anm-star"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                            <i class="icon anm anm-star-o"></i>
+                                        </a>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_news_1 | floatformat:0 }}%;"></div>
+                                    </div>
+                                    <div class="progress-value">{{ only_news_1 | floatformat:0 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spr-reviews" style="padding: 0;">
+                            <div class="review-inner">
+                                {% for item in news_comment %}
+                                    <div class="spr-review d-flex w-100" style="border-bottom: none;">
+                                        <div class="spr-review-profile flex-shrink-0">
+                                            <svg data-jdenticon-value="user{{ item.name }}" style="border-radius: 50%;"></svg>
+                                        </div>
+                                        <div class="spr-review-content flex-grow-1" style="margin: 0;">
+                                            <div class="d-flex justify-content-between flex-column mb-2">
+                                                <div class="title-review d-flex align-items-center justify-content-between">
+                                                    <h5 class="spr-review-header-title text-transform-none mb-0">{{ item.name | slice:"50" }}</h5>
+                                                    <span class="product-review spr-starratings m-0">
+                                                        <span class="reviewLink">
+                                                            <i class="icon anm anm-star{% if item.rate < 1 %}-o{% endif %}"></i>
+                                                            <i class="icon anm anm-star{% if item.rate < 2 %}-o{% endif %}"></i>
+                                                            <i class="icon anm anm-star{% if item.rate < 3 %}-o{% endif %}"></i>
+                                                            <i class="icon anm anm-star{% if item.rate < 4 %}-o{% endif %}"></i>
+                                                            <i class="icon anm anm-star{% if item.rate < 5 %}-o{% endif %}"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <b class="head-font">{{ item.create_at }}</b>
+                                            <p class="spr-review-body">
+                                                {{ item.comment | slice:"237" }}...
+                                            </p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 option-two" style="padding-top: 10px;">
+                        <form method="post" id="p-form" autocomplete="off" class="product-review-form new-review-form" style="padding-left: 20px; padding-right: 20px;">
+                            {% csrf_token %}
+                            <h2>{% trans "Leave a comment"%}</h2>
+                            <fieldset class="row spr-form-contact">
+                                <div class="col-sm-6 spr-form-contact-name form-group">
+                                    <label class="spr-form-label" for="nickname">{% trans 'Full-Name'%}
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input class="spr-form-input spr-form-input-text" id="name" type="text" name="name" required/>
+                                </div>
+                                <div class="col-sm-6 spr-form-contact-email form-group">
+                                    <label class="spr-form-label" for="email">{% trans "Phone"%}
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input class="spr-form-input spr-form-input-email " id="phone" type="text" name="email" required/>
+                                </div>
+                                <div class="col-sm-6 spr-form-review-title form-group" hidden>
+                                    <label class="spr-form-label" for="review">News
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input class="spr-form-input spr-form-input-text " id="news" value="{{ news.id }}" type="text" name="review"/>
+                                </div>
+                                <div class="col-sm-6 spr-form-review-rating form-group">
+                                    <div class="product-review">
+                                        <div class="rating">
+                                            <input class="rate" type="radio" id="star5" name="rating" value="5" />
+                                            <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                                            <input class="rate" type="radio" id="star4" name="rating" value="4" />
+                                            <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                                            <input class="rate" type="radio" id="star3" name="rating" value="3" />
+                                            <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                                            <input class="rate" type="radio" id="star2" name="rating" value="2" />
+                                            <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                                            <input class="rate" type="radio" id="star1" name="rating" value="1" />
+                                            <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 spr-form-review-body form-group">
+                                    <label class="spr-form-label" for="message">
+                                        {% trans "Body of Comment"%}
+                                    </label>
+                                    <div class="spr-form-input">
+                                        <textarea class="spr-form-input spr-form-input-textarea" id="comment" name="comment" rows="8"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="spr-form-actions clearfix">
+                                <button type="submit" class="btn btn-primary spr-button spr-button-primary" style="background-color: black;">{% trans "Submit"%}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                <div id="tab2" class="tab-content" style="padding-top: 10px; padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <button class="btn" data-toggle="modal" data-target="#exampleModalCenter" style="width: 100%; background-color: black;">{% trans "write reviews"%}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content" style="background-color: transparent; border: none;">
+                            <form method="post" autocomplete="off" id="p-form" accept-charset="UTF-8" class="comment-form">
+                                {% csrf_token %}
+                                <h2>{% trans "Leave a comment"%}</h2>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Ravshan">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="+998(9*)***-**-**">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6" hidden>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" value="{{ news.id }}" id="news" name="phone" placeholder="+998(9*)***-**-**">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 spr-form-review-rating form-group" style="margin: 0; padding-bottom: 0; padding-left: 10px; padding-right: 0; padding-top: 0;">
+                                        <div class="product-review">
+                                            <div class="rating">
+                                                <input class="rate" type="radio" id="star5" name="rating" value="5" />
+                                                <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                                                <input class="rate" type="radio" id="star4" name="rating" value="4" />
+                                                <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                                                <input class="rate" type="radio" id="star3" name="rating" value="3" />
+                                                <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                                                <input class="rate" type="radio" id="star2" name="rating" value="2" />
+                                                <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                                                <input class="rate" type="radio" id="star1" name="rating" value="1" />
+                                                <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <textarea rows="4" id="comment" name="comment" placeholder="{% trans "Your Message"%}"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <button type="submit" class="btn">{% trans "Submit"%}</button>
+                                    </div>
+                                </div>
+                            </form>
+                      </div>
+                  </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+        <div class="container-fluid" style="background-color: #221446;">
+            <div class="space" style="width: 100%; height: 1px; background-color: black;">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        	<div class="row">
+            	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        			<div class="empty-page-content text-center">
+                        <h1 style="color: white; font-size: 60px;"><strong>{% trans "404 Not-Found"%}</strong></h1>
+                        <p style="color: white;">{% trans "Oops! Something is wrong"%}</p>
+                      </div>
+        		</div>
+        	</div>
+        </div>
+    {% endif %}
+     <style>
+        @media only screen and (min-width: 1350px) {
+            .product-container {
+                width: 100%;
+                margin-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        #p-form {
+            padding: 20px;
+            border: 1px solid #e8e9eb;
+            background: #f5f5f5;
+            margin-top: 40px;
+        }
+        #p-form input[type="text"], #p-form input[type="text"], #p-form textarea {
+            background: #fff;
+        }
+     </style>
+     {% include 'small_templates/footer_slider.html'%}
+     {% include 'footer.html' %}
+     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+     <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/jquery.cookie.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/wow.min.js'%}"></script>
+     <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'assets/js/plugins.js'%}"></script>
+     <script src="{% static 'assets/js/popper.min.js'%}"></script>
+     <script src="{% static 'assets/js/lazysizes.js'%}"></script>
+     <script src="{% static 'assets/js/main.js'%}"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.2.0/dist/jdenticon.min.js" async></script>
+     {% include 'post-method/news_post.html' %}
+     <script>
+         $(document).ready(function () {
+             $('.article img').addClass('img-fluid')
+         });
+     </script>
+     <script>
+         $(document).ready(function () {
+             $('.article img').attr("loading","lazy")
+         });
+     </script>
+     <script>
+        $(document).ready(function () {
+            $('.article img').css("objectFit","cover");
+        });
+    </script>
+</div>
+</body>
+</html>
+{% endif %}
+{% if info.status == 'Close' %}
+{% include 'error/coming-son.html'%}
+{% endif %}
+{% endfor %}
+{% endif %}

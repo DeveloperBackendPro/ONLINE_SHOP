@@ -1,0 +1,178 @@
+.log-in-section {
+    overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 0
+}
+
+.log-in-section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1
+}
+
+.log-in-section.otp-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.log-in-section .image-contain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%
+}
+
+.log-in-section .inputs {
+    margin: calc(-2px + (-8 - 2) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .inputs input {
+    margin: calc(2px + (8 - 2) * ((100vw - 320px) / (1920 - 320)));
+    border: none
+}
+
+.log-in-section .log-in-box {
+    background-color: #f8f8f8;
+    padding: calc(16px + (50 - 16) * ((100vw - 320px) / (1920 - 320)));
+    border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .log-in-box .logo-name a {
+    font-size: calc(28px + (35 - 28) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: bold;
+    color: #222;
+    font-family: "Public Sans", sans-serif;
+    display: block
+}
+
+.log-in-section .log-in-box .logo-name a img {
+    width: calc(150px + (225 - 150) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .log-in-box .log-in-title {
+    margin-bottom: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .log-in-box .log-in-title h3 {
+    margin-bottom: calc(1px + (6 - 1) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .log-in-box .log-in-title h4, .log-in-section .log-in-box .log-in-title h5 {
+    color: #4a5568;
+    margin-top: 8px
+}
+
+.log-in-section .log-in-box .log-in-button ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+[dir="rtl"] .log-in-section .log-in-box .log-in-button ul {
+    padding-right: 0
+}
+
+.log-in-section .log-in-box .log-in-button ul li {
+    display: block;
+    width: 100%
+}
+
+.log-in-section .log-in-box .log-in-button ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    color: #222;
+    border-radius: 5px;
+    padding: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320))) calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+    background-color: #fff
+}
+
+.log-in-section .log-in-box .log-in-button ul li a img {
+    width: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .log-in-box .remember-box label {
+    font-size: 16px
+}
+
+.log-in-section .log-in-box .remember-box label span {
+    font-weight: 500;
+    color: var(--theme-color)
+}
+
+.log-in-section .log-in-box .other-log-in h6 {
+    color: #4a5568;
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 0 14px;
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.log-in-section .log-in-box .sign-up-box h4 {
+    color: #4a5568;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: calc(0px + (3 - 0) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.log-in-section .log-in-box .sign-up-box a {
+    font-weight: 500;
+    font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: -4px;
+    display: block
+}
+
+.log-in-section .log-in-box .sign-up-box a:hover {
+    color: var(--theme-color)
+}
+
+.log-in-section .log-in-box .contact-title h2 {
+    margin-bottom: 15px
+}
+
+.log-in-section .log-in-box .contact-title h5 {
+    width: 53%;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #4a5568
+}

@@ -1,0 +1,322 @@
+    :root {
+    --theme-color: #0da487
+}
+
+
+.theme-invoice-1 ul {
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+.theme-invoice-1 li {
+    display: inline-block;
+    font-size: 14px
+}
+
+.theme-invoice-1 button:focus {
+    outline: none
+}
+
+:focus {
+    outline: none
+}
+
+.theme-invoice-1 h3 {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0
+}
+
+.theme-invoice-1 h5 {
+    font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 400
+}
+
+.theme-invoice-1 span {
+    display: inline-block
+}
+
+.theme-invoice-1 .theme-color {
+    color: var(--theme-color) !important
+}
+
+.theme-invoice-1 .theme-bg-color {
+    background: var(--theme-color) !important
+}
+
+.theme-invoice-1 .text-content {
+    color: #939393 !important
+}
+
+.theme-invoice-1 .btn {
+    position: relative;
+    padding: 8px 10px;
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: capitalize
+}
+
+.theme-invoice-1 .btn:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.theme-invoice-1 .theme-color {
+    color: var(--theme-color)
+}
+
+.theme-invoice-1 .invoice-wrapper {
+    background-color: white;
+    -webkit-box-shadow: #e6e6e6 0px 0px 14px 3px;
+    box-shadow: #e6e6e6 0px 0px 14px 3px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-footer {
+    padding: calc(15px + (45 - 15) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.theme-invoice-1 .invoice-wrapper {
+    padding: 28px 22px}
+
+.theme-invoice-1 .invoice-wrapper .invoice-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-header .header-image img {
+    width: 134px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-header .header-content h3 {
+    font-weight: 700;
+    font-size: 22px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body {
+    margin-top: 23px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .top-sec .details-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    gap: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320)))
+}
+
+@media (max-width: 480px) {
+    .theme-invoice-1 .invoice-wrapper .invoice-body .top-sec .details-box {
+        display: block
+    }
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .top-sec .details-box .address-box {
+    background-color: #f7f7f7;
+    padding: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320))) calc(17px + (30 - 17) * ((100vw - 320px) / (1920 - 320)));
+    width: 100%
+}
+
+@media (max-width: 480px) {
+    .theme-invoice-1 .invoice-wrapper .invoice-body .top-sec .details-box .address-box:last-child {
+        margin-top: 15px
+    }
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .top-sec .details-box .address-box ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .top-sec .details-box .address-box ul li {
+    font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+    color: #222;
+    width: 100%;
+    display: block;
+    white-space: nowrap
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table {
+    margin-top: 25px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table .table {
+    border: 1px solid #E2E2E2
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table .table > :not(:first-child) {
+    border-top: 1px solid #E2E2E2
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table .table thead tr th {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border-left: 1px solid #E2E2E2;
+    padding: calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320)));
+    white-space: nowrap
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table .table tbody tr td {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #939393;
+    border-left: 1px solid #E2E2E2;
+    padding: 18px;
+    white-space: nowrap
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 {
+    margin-top: 25px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table {
+    border: 1px solid #E2E2E2
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table > :not(:first-child) {
+    border-top: none
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table thead tr th {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 12px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table tbody tr:nth-child(even) td {
+    background-color: #F7F7F7
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table tbody tr td {
+    font-weight: 700;
+    vertical-align: middle;
+    font-size: 14px;
+    text-align: center;
+    color: #222;
+    border-left: 1px solid #E2E2E2;
+    border-bottom: none;
+    padding: 9px 18px
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table tbody tr td .item-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .invoice-table-2 .table tbody tr td .item-detail li {
+    width: 100%;
+    white-space: nowrap
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .price-box ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    gap: calc(5px + (53 - 5) * ((100vw - 320px) / (1920 - 320)));
+    padding: 0 10px
+}
+
+@media (max-width: 390px) {
+    .theme-invoice-1 .invoice-wrapper .invoice-body .price-box ul {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+}
+
+@media (max-width: 360px) {
+    .theme-invoice-1 .invoice-wrapper .invoice-body .price-box ul {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-body .price-box ul li {
+    font-size: 15px;
+    font-weight: 800
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    /*{#margin-top: calc(19px + (40 - 19) * ((100vw - 320px) / (1920 - 320)))#}*/
+}
+
+@media (max-width: 390px) {
+    .theme-invoice-1 .invoice-wrapper .invoice-footer {
+        display: block
+    }
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-footer .signature-box {
+    display: inline-block
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-footer .signature-box img {
+    display: block;
+    width: calc(80px + (96 - 80) * ((100vw - 320px) / (1920 - 320)));
+    text-align: center;
+    margin: 0 auto
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-footer .signature-box h5 {
+    padding: calc(7px + (12 - 7) * ((100vw - 320px) / (1920 - 320))) calc(7px + (12 - 7) * ((100vw - 320px) / (1920 - 320))) 0;
+    text-align: center;
+    border-top: 1px solid #E2E2E2;
+    margin-top: calc(7px + (12 - 7) * ((100vw - 320px) / (1920 - 320)))
+}
+
+@media (max-width: 390px) {
+    .theme-invoice-1 .invoice-wrapper .invoice-footer .button-group {
+        margin-top: 15px
+    }
+}
+
+.theme-invoice-1 .invoice-wrapper .invoice-footer .button-group .print-button {
+    background-color: #222
+}

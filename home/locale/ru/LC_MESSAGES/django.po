@@ -1,0 +1,1180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-12 20:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: home/templates/Authenticate/login.html:40
+#: home/templates/Authenticate/password_reset_complete.html:37
+#: home/templates/Authenticate/password_reset_confirm.html:37
+#: home/templates/Authenticate/password_reset_done.html:37
+#: home/templates/Authenticate/password_reset_form.html:37
+#: home/templates/Authenticate/register_client.html:41
+#: home/templates/Authenticate/verify.html:41
+#: home/templates/account/change_password.html:32
+#: home/templates/account/client.html:32
+#: home/templates/account/client_update.html:32 home/templates/header.html:11
+#: home/templates/order/ShopCart.html:40 home/templates/order/order.html:40
+#: home/templates/order/order_detail.html:34
+#: home/templates/order/payment.html:34 home/templates/pages/aboutus.html:32
+#: home/templates/pages/contact.html:40 home/templates/pages/faq.html:40
+#: home/templates/pages/filter_product.html:33
+#: home/templates/pages/news_detail.html:34
+#: home/templates/pages/newshop.html:38
+#: home/templates/pages/product-detail.html:33
+#: home/templates/pages/search.html:39
+msgid " Worldwide Express Shipping"
+msgstr "Экспресс-доставка по всему миру"
+
+#: home/templates/Authenticate/login.html:47
+#: home/templates/Authenticate/password_reset_complete.html:44
+#: home/templates/Authenticate/password_reset_confirm.html:44
+#: home/templates/Authenticate/password_reset_done.html:44
+#: home/templates/Authenticate/password_reset_form.html:44
+#: home/templates/Authenticate/register_client.html:48
+#: home/templates/Authenticate/verify.html:48
+#: home/templates/account/change_password.html:39
+#: home/templates/account/change_password.html:162
+#: home/templates/account/client.html:39 home/templates/account/client.html:162
+#: home/templates/account/client_update.html:39
+#: home/templates/account/client_update.html:162 home/templates/header.html:18
+#: home/templates/order/ShopCart.html:47 home/templates/order/order.html:47
+#: home/templates/order/order_detail.html:41
+#: home/templates/order/order_detail.html:164
+#: home/templates/order/payment.html:41 home/templates/order/payment.html:164
+#: home/templates/pages/aboutus.html:39 home/templates/pages/contact.html:47
+#: home/templates/pages/faq.html:47 home/templates/pages/filter_product.html:40
+#: home/templates/pages/news_detail.html:41
+#: home/templates/pages/newshop.html:45
+#: home/templates/pages/product-detail.html:40
+#: home/templates/pages/search.html:46
+msgid "Language"
+msgstr "Язык"
+
+#: home/templates/Authenticate/login.html:55
+#: home/templates/Authenticate/login.html:148
+#: home/templates/Authenticate/password_reset_complete.html:52
+#: home/templates/Authenticate/password_reset_confirm.html:52
+#: home/templates/Authenticate/password_reset_done.html:52
+#: home/templates/Authenticate/password_reset_form.html:52
+#: home/templates/Authenticate/register_client.html:56
+#: home/templates/Authenticate/verify.html:56
+#: home/templates/account/change_password.html:47
+#: home/templates/account/client.html:47
+#: home/templates/account/client_update.html:47 home/templates/header.html:26
+#: home/templates/order/ShopCart.html:55 home/templates/order/order.html:55
+#: home/templates/order/order_detail.html:49
+#: home/templates/order/payment.html:49 home/templates/pages/aboutus.html:47
+#: home/templates/pages/contact.html:55 home/templates/pages/faq.html:55
+#: home/templates/pages/filter_product.html:48
+#: home/templates/pages/news_detail.html:49
+#: home/templates/pages/newshop.html:53
+#: home/templates/pages/product-detail.html:48
+#: home/templates/pages/search.html:54
+msgid "Login"
+msgstr "Войти"
+
+#: home/templates/Authenticate/login.html:59
+#: home/templates/Authenticate/password_reset_complete.html:56
+#: home/templates/Authenticate/password_reset_confirm.html:56
+#: home/templates/Authenticate/password_reset_done.html:56
+#: home/templates/Authenticate/password_reset_form.html:56
+#: home/templates/Authenticate/register_client.html:60
+#: home/templates/Authenticate/verify.html:60
+#: home/templates/account/change_password.html:51
+#: home/templates/account/client.html:51
+#: home/templates/account/client_update.html:51 home/templates/header.html:30
+#: home/templates/order/ShopCart.html:59 home/templates/order/order.html:59
+#: home/templates/order/order_detail.html:53
+#: home/templates/order/payment.html:53 home/templates/pages/aboutus.html:51
+#: home/templates/pages/contact.html:59 home/templates/pages/faq.html:59
+#: home/templates/pages/filter_product.html:52
+#: home/templates/pages/news_detail.html:53
+#: home/templates/pages/newshop.html:57
+#: home/templates/pages/product-detail.html:52
+#: home/templates/pages/search.html:58
+msgid "Create Account"
+msgstr "Зарегистрироваться"
+
+#: home/templates/Authenticate/login.html:82
+#: home/templates/Authenticate/login.html:124
+#: home/templates/Authenticate/password_reset_complete.html:79
+#: home/templates/Authenticate/password_reset_complete.html:121
+#: home/templates/Authenticate/password_reset_confirm.html:79
+#: home/templates/Authenticate/password_reset_confirm.html:121
+#: home/templates/Authenticate/password_reset_done.html:79
+#: home/templates/Authenticate/password_reset_done.html:121
+#: home/templates/Authenticate/password_reset_form.html:79
+#: home/templates/Authenticate/password_reset_form.html:121
+#: home/templates/Authenticate/register_client.html:83
+#: home/templates/Authenticate/register_client.html:125
+#: home/templates/Authenticate/verify.html:83
+#: home/templates/Authenticate/verify.html:125
+#: home/templates/account/change_password.html:74
+#: home/templates/account/change_password.html:116
+#: home/templates/account/client.html:74 home/templates/account/client.html:116
+#: home/templates/account/client_update.html:74
+#: home/templates/account/client_update.html:116 home/templates/header.html:53
+#: home/templates/header.html:95 home/templates/order/ShopCart.html:82
+#: home/templates/order/ShopCart.html:124 home/templates/order/order.html:82
+#: home/templates/order/order.html:124
+#: home/templates/order/order_detail.html:76
+#: home/templates/order/order_detail.html:118
+#: home/templates/order/payment.html:76 home/templates/order/payment.html:118
+#: home/templates/pages/aboutus.html:74 home/templates/pages/aboutus.html:116
+#: home/templates/pages/contact.html:82 home/templates/pages/contact.html:124
+#: home/templates/pages/faq.html:82 home/templates/pages/faq.html:124
+#: home/templates/pages/filter_product.html:75
+#: home/templates/pages/filter_product.html:117
+#: home/templates/pages/news_detail.html:76
+#: home/templates/pages/news_detail.html:118
+#: home/templates/pages/newshop.html:80 home/templates/pages/newshop.html:122
+#: home/templates/pages/product-detail.html:75
+#: home/templates/pages/product-detail.html:117
+#: home/templates/pages/search.html:81 home/templates/pages/search.html:123
+msgid "Home"
+msgstr "Главный"
+
+#: home/templates/Authenticate/login.html:84
+#: home/templates/Authenticate/login.html:125
+#: home/templates/Authenticate/password_reset_complete.html:81
+#: home/templates/Authenticate/password_reset_complete.html:122
+#: home/templates/Authenticate/password_reset_confirm.html:81
+#: home/templates/Authenticate/password_reset_confirm.html:122
+#: home/templates/Authenticate/password_reset_done.html:81
+#: home/templates/Authenticate/password_reset_done.html:122
+#: home/templates/Authenticate/password_reset_form.html:81
+#: home/templates/Authenticate/password_reset_form.html:122
+#: home/templates/Authenticate/register_client.html:85
+#: home/templates/Authenticate/register_client.html:126
+#: home/templates/Authenticate/verify.html:85
+#: home/templates/Authenticate/verify.html:126
+#: home/templates/account/change_password.html:76
+#: home/templates/account/change_password.html:117
+#: home/templates/account/client.html:76 home/templates/account/client.html:117
+#: home/templates/account/client_update.html:76
+#: home/templates/account/client_update.html:117 home/templates/header.html:55
+#: home/templates/header.html:96 home/templates/order/ShopCart.html:84
+#: home/templates/order/ShopCart.html:125 home/templates/order/order.html:84
+#: home/templates/order/order.html:125
+#: home/templates/order/order_detail.html:78
+#: home/templates/order/order_detail.html:119
+#: home/templates/order/payment.html:78 home/templates/order/payment.html:119
+#: home/templates/pages/aboutus.html:76 home/templates/pages/aboutus.html:117
+#: home/templates/pages/contact.html:84 home/templates/pages/contact.html:125
+#: home/templates/pages/faq.html:84 home/templates/pages/faq.html:125
+#: home/templates/pages/filter_product.html:77
+#: home/templates/pages/filter_product.html:118
+#: home/templates/pages/news_detail.html:78
+#: home/templates/pages/news_detail.html:119
+#: home/templates/pages/newshop.html:82 home/templates/pages/newshop.html:123
+#: home/templates/pages/product-detail.html:77
+#: home/templates/pages/product-detail.html:118
+#: home/templates/pages/search.html:83 home/templates/pages/search.html:124
+msgid "Category"
+msgstr "Категория"
+
+#: home/templates/Authenticate/login.html:92
+#: home/templates/Authenticate/login.html:134
+#: home/templates/Authenticate/password_reset_complete.html:89
+#: home/templates/Authenticate/password_reset_complete.html:131
+#: home/templates/Authenticate/password_reset_confirm.html:89
+#: home/templates/Authenticate/password_reset_confirm.html:131
+#: home/templates/Authenticate/password_reset_done.html:89
+#: home/templates/Authenticate/password_reset_done.html:131
+#: home/templates/Authenticate/password_reset_form.html:89
+#: home/templates/Authenticate/password_reset_form.html:131
+#: home/templates/Authenticate/register_client.html:93
+#: home/templates/Authenticate/register_client.html:135
+#: home/templates/Authenticate/verify.html:93
+#: home/templates/Authenticate/verify.html:135
+#: home/templates/account/change_password.html:84
+#: home/templates/account/change_password.html:126
+#: home/templates/account/client.html:84 home/templates/account/client.html:126
+#: home/templates/account/client_update.html:84
+#: home/templates/account/client_update.html:126 home/templates/header.html:63
+#: home/templates/header.html:105 home/templates/order/ShopCart.html:92
+#: home/templates/order/ShopCart.html:134 home/templates/order/order.html:92
+#: home/templates/order/order.html:134
+#: home/templates/order/order_detail.html:86
+#: home/templates/order/order_detail.html:128
+#: home/templates/order/payment.html:86 home/templates/order/payment.html:128
+#: home/templates/pages/aboutus.html:84 home/templates/pages/aboutus.html:126
+#: home/templates/pages/contact.html:92 home/templates/pages/contact.html:134
+#: home/templates/pages/faq.html:92 home/templates/pages/faq.html:134
+#: home/templates/pages/filter_product.html:85
+#: home/templates/pages/filter_product.html:127
+#: home/templates/pages/news_detail.html:86
+#: home/templates/pages/news_detail.html:128
+#: home/templates/pages/newshop.html:90 home/templates/pages/newshop.html:132
+#: home/templates/pages/product-detail.html:85
+#: home/templates/pages/product-detail.html:127
+#: home/templates/pages/search.html:91 home/templates/pages/search.html:133
+msgid "About us"
+msgstr "О нас"
+
+#: home/templates/Authenticate/login.html:93
+#: home/templates/Authenticate/login.html:135
+#: home/templates/Authenticate/password_reset_complete.html:90
+#: home/templates/Authenticate/password_reset_complete.html:132
+#: home/templates/Authenticate/password_reset_confirm.html:90
+#: home/templates/Authenticate/password_reset_confirm.html:132
+#: home/templates/Authenticate/password_reset_done.html:90
+#: home/templates/Authenticate/password_reset_done.html:132
+#: home/templates/Authenticate/password_reset_form.html:90
+#: home/templates/Authenticate/password_reset_form.html:132
+#: home/templates/Authenticate/register_client.html:94
+#: home/templates/Authenticate/register_client.html:136
+#: home/templates/Authenticate/verify.html:94
+#: home/templates/Authenticate/verify.html:136
+#: home/templates/account/change_password.html:85
+#: home/templates/account/change_password.html:127
+#: home/templates/account/client.html:85 home/templates/account/client.html:127
+#: home/templates/account/client_update.html:85
+#: home/templates/account/client_update.html:127 home/templates/header.html:64
+#: home/templates/header.html:106 home/templates/order/ShopCart.html:93
+#: home/templates/order/ShopCart.html:135 home/templates/order/order.html:93
+#: home/templates/order/order.html:135
+#: home/templates/order/order_detail.html:87
+#: home/templates/order/order_detail.html:129
+#: home/templates/order/payment.html:87 home/templates/order/payment.html:129
+#: home/templates/pages/aboutus.html:85 home/templates/pages/aboutus.html:127
+#: home/templates/pages/contact.html:93 home/templates/pages/contact.html:135
+#: home/templates/pages/faq.html:93 home/templates/pages/faq.html:135
+#: home/templates/pages/filter_product.html:86
+#: home/templates/pages/filter_product.html:128
+#: home/templates/pages/news_detail.html:87
+#: home/templates/pages/news_detail.html:129
+#: home/templates/pages/newshop.html:91 home/templates/pages/newshop.html:133
+#: home/templates/pages/product-detail.html:86
+#: home/templates/pages/product-detail.html:128
+#: home/templates/pages/search.html:92 home/templates/pages/search.html:134
+msgid "News"
+msgstr "Новости"
+
+#: home/templates/Authenticate/login.html:94
+#: home/templates/Authenticate/login.html:136
+#: home/templates/Authenticate/password_reset_complete.html:91
+#: home/templates/Authenticate/password_reset_complete.html:133
+#: home/templates/Authenticate/password_reset_confirm.html:91
+#: home/templates/Authenticate/password_reset_confirm.html:133
+#: home/templates/Authenticate/password_reset_done.html:91
+#: home/templates/Authenticate/password_reset_done.html:133
+#: home/templates/Authenticate/password_reset_form.html:91
+#: home/templates/Authenticate/password_reset_form.html:133
+#: home/templates/Authenticate/register_client.html:95
+#: home/templates/Authenticate/register_client.html:137
+#: home/templates/Authenticate/verify.html:95
+#: home/templates/Authenticate/verify.html:137
+#: home/templates/account/change_password.html:86
+#: home/templates/account/change_password.html:128
+#: home/templates/account/client.html:86 home/templates/account/client.html:128
+#: home/templates/account/client_update.html:86
+#: home/templates/account/client_update.html:128 home/templates/header.html:65
+#: home/templates/header.html:107 home/templates/order/ShopCart.html:94
+#: home/templates/order/ShopCart.html:136 home/templates/order/order.html:94
+#: home/templates/order/order.html:136
+#: home/templates/order/order_detail.html:88
+#: home/templates/order/order_detail.html:130
+#: home/templates/order/payment.html:88 home/templates/order/payment.html:130
+#: home/templates/pages/aboutus.html:86 home/templates/pages/aboutus.html:128
+#: home/templates/pages/contact.html:94 home/templates/pages/contact.html:136
+#: home/templates/pages/faq.html:94 home/templates/pages/faq.html:136
+#: home/templates/pages/filter_product.html:87
+#: home/templates/pages/filter_product.html:129
+#: home/templates/pages/news_detail.html:88
+#: home/templates/pages/news_detail.html:130
+#: home/templates/pages/newshop.html:92 home/templates/pages/newshop.html:134
+#: home/templates/pages/product-detail.html:87
+#: home/templates/pages/product-detail.html:129
+#: home/templates/pages/search.html:93 home/templates/pages/search.html:135
+msgid "Faq"
+msgstr "ЧЗВ"
+
+#: home/templates/Authenticate/login.html:95
+#: home/templates/Authenticate/login.html:137
+#: home/templates/Authenticate/password_reset_complete.html:92
+#: home/templates/Authenticate/password_reset_complete.html:134
+#: home/templates/Authenticate/password_reset_confirm.html:92
+#: home/templates/Authenticate/password_reset_confirm.html:134
+#: home/templates/Authenticate/password_reset_done.html:92
+#: home/templates/Authenticate/password_reset_done.html:134
+#: home/templates/Authenticate/password_reset_form.html:92
+#: home/templates/Authenticate/password_reset_form.html:134
+#: home/templates/Authenticate/register_client.html:96
+#: home/templates/Authenticate/register_client.html:138
+#: home/templates/Authenticate/verify.html:96
+#: home/templates/Authenticate/verify.html:138
+#: home/templates/account/change_password.html:87
+#: home/templates/account/change_password.html:129
+#: home/templates/account/client.html:87 home/templates/account/client.html:129
+#: home/templates/account/client_update.html:87
+#: home/templates/account/client_update.html:129 home/templates/header.html:66
+#: home/templates/header.html:108 home/templates/order/ShopCart.html:95
+#: home/templates/order/ShopCart.html:137 home/templates/order/order.html:95
+#: home/templates/order/order.html:137
+#: home/templates/order/order_detail.html:89
+#: home/templates/order/order_detail.html:131
+#: home/templates/order/payment.html:89 home/templates/order/payment.html:131
+#: home/templates/pages/aboutus.html:87 home/templates/pages/aboutus.html:129
+#: home/templates/pages/contact.html:95 home/templates/pages/contact.html:137
+#: home/templates/pages/faq.html:95 home/templates/pages/faq.html:137
+#: home/templates/pages/filter_product.html:88
+#: home/templates/pages/filter_product.html:130
+#: home/templates/pages/news_detail.html:89
+#: home/templates/pages/news_detail.html:131
+#: home/templates/pages/newshop.html:93 home/templates/pages/newshop.html:135
+#: home/templates/pages/product-detail.html:88
+#: home/templates/pages/product-detail.html:130
+#: home/templates/pages/search.html:94 home/templates/pages/search.html:136
+msgid "Contact"
+msgstr "Контакт"
+
+#: home/templates/Authenticate/login.html:122
+#: home/templates/Authenticate/password_reset_complete.html:119
+#: home/templates/Authenticate/password_reset_confirm.html:119
+#: home/templates/Authenticate/password_reset_done.html:119
+#: home/templates/Authenticate/password_reset_form.html:119
+#: home/templates/Authenticate/register_client.html:123
+#: home/templates/Authenticate/verify.html:123
+#: home/templates/account/change_password.html:114
+#: home/templates/account/client.html:114
+#: home/templates/account/client_update.html:114 home/templates/header.html:93
+#: home/templates/order/ShopCart.html:122 home/templates/order/order.html:122
+#: home/templates/order/order_detail.html:116
+#: home/templates/order/payment.html:116 home/templates/pages/aboutus.html:114
+#: home/templates/pages/contact.html:122 home/templates/pages/faq.html:122
+#: home/templates/pages/filter_product.html:115
+#: home/templates/pages/news_detail.html:116
+#: home/templates/pages/newshop.html:120
+#: home/templates/pages/product-detail.html:115
+#: home/templates/pages/search.html:121
+msgid "Close Menu"
+msgstr "Закрыть меню"
+
+#: home/templates/Authenticate/login.html:151
+#: home/templates/Authenticate/register_client.html:152
+#: home/templates/account/client_update.html:197
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: home/templates/Authenticate/login.html:155
+#: home/templates/Authenticate/register_client.html:164
+msgid "Password"
+msgstr "Пароль"
+
+#: home/templates/Authenticate/login.html:159
+#: home/templates/Authenticate/password_reset_confirm.html:151
+#: home/templates/Authenticate/password_reset_form.html:152
+#: home/templates/Authenticate/register_client.html:172
+#: home/templates/Authenticate/verify.html:175
+#: home/templates/pages/contact.html:163
+#: home/templates/pages/news_detail.html:344
+#: home/templates/pages/news_detail.html:406
+#: home/templates/pages/product-detail.html:504
+#: home/templates/pages/product-detail.html:566
+msgid "Submit"
+msgstr "Подтверждение"
+
+#: home/templates/Authenticate/login.html:160
+#: home/templates/Authenticate/password_reset_confirm.html:152
+#: home/templates/Authenticate/register_client.html:173
+#: home/templates/Authenticate/verify.html:173
+msgid "Forgot your password ?"
+msgstr "Забыли пароль ?"
+
+#: home/templates/Authenticate/login.html:160
+#: home/templates/Authenticate/password_reset_confirm.html:152
+#: home/templates/Authenticate/register_client.html:173
+msgid "Reset password"
+msgstr "Сброс пароля"
+
+#: home/templates/Authenticate/password_reset_complete.html:145
+#: home/templates/Authenticate/password_reset_done.html:145
+msgid "Well done!"
+msgstr "Отличная работа !"
+
+#: home/templates/Authenticate/password_reset_complete.html:148
+msgid "Your password has been changed ! You can log in again"
+msgstr "Ваш пароль был изменен ! Вы можете войти снова"
+
+#: home/templates/Authenticate/password_reset_complete.html:163
+#: home/templates/Authenticate/password_reset_confirm.html:167
+#: home/templates/Authenticate/password_reset_done.html:163
+#: home/templates/Authenticate/password_reset_form.html:168
+#: home/templates/footer.html:9
+msgid "Location"
+msgstr "Геолокация"
+
+#: home/templates/Authenticate/password_reset_complete.html:167
+#: home/templates/Authenticate/password_reset_confirm.html:171
+#: home/templates/Authenticate/password_reset_done.html:167
+#: home/templates/Authenticate/password_reset_form.html:172
+#: home/templates/footer.html:14 home/templates/pages/contact.html:148
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+#: home/templates/Authenticate/password_reset_complete.html:169
+#: home/templates/Authenticate/password_reset_confirm.html:173
+#: home/templates/Authenticate/password_reset_done.html:169
+#: home/templates/Authenticate/password_reset_form.html:174
+msgid "Toshkent shaxar Yunusobod"
+msgstr "Ташкент шахар Юнусабад"
+
+#: home/templates/Authenticate/password_reset_complete.html:172
+#: home/templates/Authenticate/password_reset_confirm.html:176
+#: home/templates/Authenticate/password_reset_done.html:172
+#: home/templates/Authenticate/password_reset_form.html:177
+#: home/templates/footer.html:19
+msgid "Working hours: 8.00 - 16.00"
+msgstr "Время работы: 8.00 - 16.00"
+
+#: home/templates/Authenticate/password_reset_complete.html:173
+#: home/templates/Authenticate/password_reset_confirm.html:177
+#: home/templates/Authenticate/password_reset_done.html:173
+#: home/templates/Authenticate/password_reset_form.html:178
+#: home/templates/footer.html:20
+msgid "Day off: Saturday, Sunday"
+msgstr "Выходной: суббота, воскресенье"
+
+#: home/templates/Authenticate/password_reset_confirm.html:145
+msgid "Password Confirm"
+msgstr "Подтвердить пароль"
+
+#: home/templates/Authenticate/password_reset_done.html:148
+msgid ""
+"If you have an email, a password reset link has been sent to your email !"
+msgstr ""
+"Если у вас есть адрес электронной почты, на ваш адрес электронной почты была "
+"отправлена ссылка для сброса пароля!"
+
+#: home/templates/Authenticate/password_reset_form.html:145
+msgid "Password Reset"
+msgstr "Восстановление пароля"
+
+#: home/templates/Authenticate/password_reset_form.html:148
+#: home/templates/Authenticate/register_client.html:160
+#: home/templates/account/client_update.html:205
+#: home/templates/order/order_detail.html:218
+msgid "Email"
+msgstr "Электронная почта"
+
+#: home/templates/Authenticate/password_reset_form.html:153
+msgid "Not registred yet ?"
+msgstr "Еще не зарегистрированы ?"
+
+#: home/templates/Authenticate/password_reset_form.html:153
+msgid "Signup"
+msgstr "Зарегистрироваться"
+
+#: home/templates/Authenticate/register_client.html:149
+msgid "Create a new account"
+msgstr "Создать новый аккаунт"
+
+#: home/templates/Authenticate/register_client.html:156
+#: home/templates/pages/news_detail.html:301
+#: home/templates/pages/product-detail.html:461
+msgid "Full-Name"
+msgstr "Ф.И.О"
+
+#: home/templates/Authenticate/register_client.html:168
+#: home/templates/account/change_password.html:205
+msgid "Confirm Password"
+msgstr "Подтвердите пароль"
+
+#: home/templates/Authenticate/register_client.html:210
+msgid "A user with that username already exists"
+msgstr "Пользователь с таким именем уже существует"
+
+#: home/templates/Authenticate/register_client.html:213
+msgid "An user with this email already exists !"
+msgstr "Пользователь с таким адресом электронной почты уже существует!"
+
+#: home/templates/Authenticate/verify.html:158
+msgid "Please enter the one time password to verify your account"
+msgstr ""
+"Пожалуйста, введите одноразовый пароль, чтобы подтвердить свою учетную запись"
+
+#: home/templates/Authenticate/verify.html:159
+msgid "A code has been sent to"
+msgstr "Код был отправлен на"
+
+#: home/templates/account/change_password.html:144
+#: home/templates/account/client.html:144
+#: home/templates/account/client_update.html:144
+#: home/templates/order/order_detail.html:146
+#: home/templates/order/payment.html:146
+msgid "Year"
+msgstr "Год"
+
+#: home/templates/account/change_password.html:149
+#: home/templates/account/client.html:149
+#: home/templates/account/client_update.html:149
+#: home/templates/order/order_detail.html:151
+#: home/templates/order/payment.html:151
+msgid "Month"
+msgstr "Месяц"
+
+#: home/templates/account/change_password.html:154
+#: home/templates/account/client.html:154
+#: home/templates/account/client_update.html:154
+#: home/templates/order/order_detail.html:156
+#: home/templates/order/payment.html:156
+msgid "Day"
+msgstr "День"
+
+#: home/templates/account/change_password.html:181
+#: home/templates/account/client.html:181
+#: home/templates/account/client_update.html:181
+#: home/templates/order/order_detail.html:183
+#: home/templates/order/payment.html:183
+msgid "Dashboard"
+msgstr "Панель упдравления"
+
+#: home/templates/account/change_password.html:182
+#: home/templates/account/client.html:182
+#: home/templates/account/client_update.html:182
+#: home/templates/order/order_detail.html:184
+#: home/templates/order/payment.html:184
+msgid "Payment"
+msgstr "Оплата"
+
+#: home/templates/account/change_password.html:183
+#: home/templates/account/client.html:183
+#: home/templates/account/client_update.html:183
+#: home/templates/order/order_detail.html:185
+#: home/templates/order/payment.html:185
+msgid "Update"
+msgstr "Обновлять аккунта"
+
+#: home/templates/account/change_password.html:184
+#: home/templates/account/client.html:184
+#: home/templates/account/client_update.html:184
+#: home/templates/order/order_detail.html:186
+#: home/templates/order/payment.html:186
+msgid "Change-Password"
+msgstr "Изменить пароль"
+
+#: home/templates/account/change_password.html:185
+#: home/templates/account/client.html:185
+#: home/templates/account/client_update.html:185
+#: home/templates/order/order_detail.html:187
+#: home/templates/order/payment.html:187
+msgid "Logout"
+msgstr "Выйти"
+
+#: home/templates/account/change_password.html:197
+msgid "Old Password"
+msgstr "Старый пароль"
+
+#: home/templates/account/change_password.html:201
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: home/templates/account/change_password.html:210
+#: home/templates/account/client_update.html:210
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: home/templates/account/client.html:214
+msgid "Paid"
+msgstr "Оплаченный"
+
+#: home/templates/account/client_update.html:201
+#: home/templates/order/order_detail.html:227
+#: home/templates/pages/contact.html:151
+msgid "Full Name"
+msgstr "Ф.И.О"
+
+#: home/templates/banner.html:12 home/templates/banner.html:24
+#: home/templates/banner.html:46
+msgid "Shop Apple"
+msgstr "Магазин Apple"
+
+#: home/templates/banner.html:12
+msgid "Ipad Pro"
+msgstr "iPad Pro"
+
+#: home/templates/banner.html:24 home/templates/banner.html:60
+msgid "Mobile"
+msgstr "Mobile"
+
+#: home/templates/banner.html:34
+msgid " Shop Apple"
+msgstr "Магазин Apple"
+
+#: home/templates/banner.html:34
+msgid "Smart Watch"
+msgstr "Умные часы"
+
+#: home/templates/banner.html:46
+msgid "Macbook Pro"
+msgstr "Macbook Pro"
+
+#: home/templates/banner.html:60 home/templates/banner.html:68
+#: home/templates/banner.html:78
+msgid "Shop Samsung"
+msgstr "Магазин Самсунг"
+
+#: home/templates/banner.html:68
+msgid "Laptop"
+msgstr "Ноутбук"
+
+#: home/templates/banner.html:78
+msgid "Galaxy Tab"
+msgstr "Galaxy Tab"
+
+#: home/templates/banner.html:90
+msgid "All Accessories"
+msgstr "Все аксессуары"
+
+#: home/templates/banner.html:90
+msgid "Shop Now"
+msgstr "Купить сейчас"
+
+#: home/templates/banner.html:100
+msgid "Shop HP"
+msgstr "Магазин HP"
+
+#: home/templates/banner.html:100
+msgid "Hp Laptop"
+msgstr "Ноутбук HP"
+
+#: home/templates/banner.html:108
+msgid "Shop Xiaomi"
+msgstr "Магазин Xiaomi"
+
+#: home/templates/banner.html:108
+msgid "Xiaomi Mobile"
+msgstr "Xiaomi Mobile"
+
+#: home/templates/error/coming-son.html:30
+msgid "WE ARE COMING SOON !!!"
+msgstr "МЫ СКОРО ВЕРНЕМСЯ !!!"
+
+#: home/templates/error/coming-son.html:31
+msgid "The Website is Under Construction"
+msgstr "Сайт в разработке"
+
+#: home/templates/error/coming-son.html:35
+msgid "Hours ..."
+msgstr "Часы"
+
+#: home/templates/error/coming-son.html:39
+msgid "Minutes"
+msgstr "Минуты"
+
+#: home/templates/error/coming-son.html:43
+msgid "Secunds"
+msgstr "секунд"
+
+#: home/templates/error/coming-son.html:47
+msgid "We are working on fixing the problem. We back soon"
+msgstr "Мы работаем над решением проблемы. Мы скоро вернемся"
+
+#: home/templates/error/outside.html:33
+msgid "Oh No! Error 404"
+msgstr "О, нет ! Ошибка 404"
+
+#: home/templates/error/outside.html:34
+msgid "This page you requested counld not found. May the force be with you!"
+msgstr ""
+"Страница, которую вы ищете, не найдена. удалена или нет такой информации"
+
+#: home/templates/main.html:38 home/templates/main.html:102
+#: home/templates/pages/filter_product.html:153
+#: home/templates/pages/product-detail.html:236
+#: home/templates/post-method/search_post.html:33
+msgid "Add To Cart"
+msgstr "Добавить в корзину"
+
+#: home/templates/main.html:52 home/templates/main.html:116
+#: home/templates/pages/filter_product.html:167
+#: home/templates/pages/newshop.html:174 home/templates/pages/newshop.html:198
+#: home/templates/pages/product-detail.html:186
+#: home/templates/post-method/search_post.html:43
+msgid "reviews"
+msgstr "Комментарии"
+
+#: home/templates/main.html:52 home/templates/main.html:116
+#: home/templates/pages/filter_product.html:167
+#: home/templates/pages/product-detail.html:186
+#: home/templates/post-method/search_post.html:43
+msgid "Sold out"
+msgstr "Продал"
+
+#: home/templates/main.html:56 home/templates/main.html:57
+#: home/templates/main.html:120 home/templates/main.html:121
+#: home/templates/order/ShopCart.html:178
+#: home/templates/order/ShopCart.html:201 home/templates/order/order.html:264
+#: home/templates/order/order_detail.html:233
+#: home/templates/pages/filter_product.html:171
+#: home/templates/pages/filter_product.html:172
+#: home/templates/pages/newshop.html:164
+#: home/templates/pages/product-detail.html:192
+#: home/templates/pages/product-detail.html:304
+#: home/templates/post-method/search_post.html:47
+#: home/templates/post-method/search_post.html:48
+msgid "sum"
+msgstr "сум"
+
+#: home/templates/main.html:168
+msgid "Safe Delivery Service"
+msgstr "Служба безопасной доставки"
+
+#: home/templates/main.html:170
+msgid "Free shipping all purchases"
+msgstr "Бесплатная доставка всех покупок"
+
+#: home/templates/main.html:175
+msgid "Money Back Guarantee"
+msgstr "Гарантия возврата денег"
+
+#: home/templates/main.html:177
+msgid "Will be returned within 24/2 hours"
+msgstr "Будет возвращен в течение 24/2 часов"
+
+#: home/templates/main.html:182
+msgid "24/7 Help Center"
+msgstr "24/7 Справочный центр"
+
+#: home/templates/main.html:184
+msgid "All your questions are answered"
+msgstr "На все ваши вопросы есть ответы"
+
+#: home/templates/main.html:189
+msgid "Secure Payments"
+msgstr "Безопасные платежи"
+
+#: home/templates/main.html:191
+msgid "All payment are Secured and trusted"
+msgstr "Все платежи безопасны и надежны"
+
+#: home/templates/order/ShopCart.html:150
+msgid "Congratulations!"
+msgstr "Поздравляем !"
+
+#: home/templates/order/ShopCart.html:150
+msgid "You've got free shipping!"
+msgstr "У вас есть бесплатная доставка !"
+
+#: home/templates/order/ShopCart.html:156
+msgid "Image"
+msgstr "Изображение"
+
+#: home/templates/order/ShopCart.html:157
+#: home/templates/order/order_detail.html:231
+msgid "Product"
+msgstr "Продукт"
+
+#: home/templates/order/ShopCart.html:158
+msgid "Real Price"
+msgstr "Текущая цена"
+
+#: home/templates/order/ShopCart.html:159 home/templates/order/order.html:240
+msgid "Total"
+msgstr "Общий"
+
+#: home/templates/order/ShopCart.html:160 home/templates/order/order.html:241
+msgid "Color"
+msgstr "Цвет"
+
+#: home/templates/order/ShopCart.html:161
+msgid "Delete"
+msgstr "Удалить"
+
+#: home/templates/order/ShopCart.html:201
+msgid "Continue shopping Total"
+msgstr "Продолжить покупки"
+
+#: home/templates/order/ShopCart.html:217 home/templates/order/order.html:320
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: home/templates/order/ShopCart.html:220 home/templates/order/order.html:323
+msgid ""
+"You have not added any products to the shopping cart yet! or because you "
+"deleted the Cart is empty !"
+msgstr ""
+"Вы еще не добавили ни одного товара в корзину ! или потому что вы удалили "
+"Корзина пуста !"
+
+#: home/templates/order/order.html:150
+msgid "Fill out all the fields when making a purchase !"
+msgstr "Заполните все поля при оформлении покупки !"
+
+#: home/templates/order/order.html:155
+msgid "Find out the details of your purchase !"
+msgstr "Узнайте подробности вашей покупки !"
+
+#: home/templates/order/order.html:165
+msgid "Billing details"
+msgstr "ФОРМА ЗАКАЗА"
+
+#: home/templates/order/order.html:168
+msgid "First Name"
+msgstr "Имя"
+
+#: home/templates/order/order.html:172
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: home/templates/order/order.html:176
+#: home/templates/order/order_detail.html:211
+#: home/templates/pages/contact.html:155
+#: home/templates/pages/news_detail.html:307
+#: home/templates/pages/product-detail.html:467
+msgid "Phone"
+msgstr "Телефон"
+
+#: home/templates/order/order.html:180
+#: home/templates/order/order_detail.html:228
+msgid "Zip code"
+msgstr "Почтовый индекс"
+
+#: home/templates/order/order.html:184
+#: home/templates/order/order_detail.html:230
+msgid "Address"
+msgstr "Адрес"
+
+#: home/templates/order/order.html:188
+#: home/templates/order/order_detail.html:209
+msgid "Country"
+msgstr "Страна"
+
+#: home/templates/order/order.html:194
+#: home/templates/order/order_detail.html:210
+msgid "City"
+msgstr "Город"
+
+#: home/templates/order/order.html:217
+msgid "Order Notes"
+msgstr "Примечания к заказу"
+
+#: home/templates/order/order.html:223
+msgid "Place order"
+msgstr "Разместить заказ"
+
+#: home/templates/order/order.html:232
+msgid "Your Order"
+msgstr "Ваши заказы"
+
+#: home/templates/order/order.html:237
+msgid "Product Name"
+msgstr "Наименование товара"
+
+#: home/templates/order/order.html:238 home/templates/order/payment.html:234
+msgid "Price"
+msgstr "Цена"
+
+#: home/templates/order/order.html:239 home/templates/order/order.html:259
+#: home/templates/order/order_detail.html:232
+msgid "Quantity"
+msgstr "Количество"
+
+#: home/templates/order/order.html:263
+#: home/templates/order/order_detail.html:233
+msgid "Total Price"
+msgstr "Общая цена"
+
+#: home/templates/order/order.html:272
+msgid "payment method"
+msgstr "способ оплаты"
+
+#: home/templates/order/order.html:278
+msgid "Direct Bank Transfer"
+msgstr "Прямой банковский перевод"
+
+#: home/templates/order/order.html:282
+msgid ""
+"Make your payment directly into our bank account. Please use your Order ID "
+"as the payment reference. Your order won't be shipped until the funds have "
+"cleared in our account."
+msgstr ""
+"Произведите оплату непосредственно на наш банковский счет. Пожалуйста, "
+"используйте свой идентификатор заказа в качестве ссылки на платеж. Ваш заказ "
+"не будет отправлен до тех пор, пока средства не поступят на наш счет"
+
+#: home/templates/order/order.html:288
+msgid "Cheque Payment"
+msgstr "Оплата чеком"
+
+#: home/templates/order/order.html:292
+msgid ""
+"Please send your cheque to Store Name, Store Street, Store Town, Store "
+"State / County, Store Postcode."
+msgstr ""
+"Отправьте чек на название магазина, улицу магазина, город магазина, штат/"
+"округа магазина, почтовый индекс магазина."
+
+#: home/templates/order/order.html:298
+msgid "PayPal"
+msgstr "PayPal"
+
+#: home/templates/order/order.html:302
+msgid ""
+"Pay via PayPal; you can pay with your credit card if you don't have a PayPal "
+"account."
+msgstr ""
+"Оплата через PayPal: вы можете оплатить с помощью кредитной карты, если у "
+"вас нет учетной записи PayPal"
+
+#: home/templates/order/order_detail.html:216
+msgid "Issue Date"
+msgstr "Дата выпуска"
+
+#: home/templates/order/order_detail.html:217
+msgid "Invoice No"
+msgstr "Номер счета"
+
+#: home/templates/order/order_detail.html:229
+msgid "Order Note"
+msgstr "Примечание к заказу"
+
+#: home/templates/order/order_detail.html:242
+msgid "Download Invoice file"
+msgstr "Скачать файл счета-фактуры"
+
+#: home/templates/order/payment.html:203
+msgid "Payment system"
+msgstr "Платежная система"
+
+#: home/templates/order/payment.html:205
+msgid "Complete your personal account to make a purchase !"
+msgstr "Для совершения покупки заполните личный кабинет!"
+
+#: home/templates/order/payment.html:220
+msgid "Payment to personal account"
+msgstr "Оплата на лицевой счет"
+
+#: home/templates/order/payment.html:226
+msgid "Card Number"
+msgstr "Номер карты"
+
+#: home/templates/order/payment.html:230
+msgid "Month / Year"
+msgstr "Месяц / Год"
+
+#: home/templates/order/payment.html:240
+msgid "Proceed to payment"
+msgstr "Перейти к оплате"
+
+#: home/templates/pages/aboutus.html:162 home/templates/pages/faq.html:174
+#: home/templates/pages/filter_product.html:195
+#: home/templates/pages/news_detail.html:427
+#: home/templates/pages/newshop.html:220
+msgid "404 Not-Found"
+msgstr "404 Не Найдено"
+
+#: home/templates/pages/aboutus.html:163 home/templates/pages/faq.html:175
+#: home/templates/pages/filter_product.html:196
+#: home/templates/pages/news_detail.html:428
+#: home/templates/pages/newshop.html:221
+msgid "Oops! Something is wrong"
+msgstr "Упс! Что-то не так"
+
+#: home/templates/pages/contact.html:159
+msgid "Message"
+msgstr "Сообщение"
+
+#: home/templates/pages/contact.html:160
+msgid "Write Message"
+msgstr "Написать сообщение"
+
+#: home/templates/pages/faq.html:147
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+#: home/templates/pages/news_detail.html:173
+#: home/templates/pages/product-detail.html:333
+msgid "Average Rating"
+msgstr "Средний рейтинг"
+
+#: home/templates/pages/news_detail.html:181
+#: home/templates/pages/product-detail.html:341
+msgid "Comments"
+msgstr "Комментарии"
+
+#: home/templates/pages/news_detail.html:298
+#: home/templates/pages/news_detail.html:363
+#: home/templates/pages/product-detail.html:458
+#: home/templates/pages/product-detail.html:523
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: home/templates/pages/news_detail.html:336
+#: home/templates/pages/product-detail.html:496
+msgid "Body of Comment"
+msgstr "комментария"
+
+#: home/templates/pages/news_detail.html:354
+#: home/templates/pages/product-detail.html:514
+msgid "write reviews"
+msgstr "Написать комментарий"
+
+#: home/templates/pages/news_detail.html:400
+#: home/templates/pages/product-detail.html:560
+msgid "Your Message"
+msgstr "Ваше сообщение"
+
+#: home/templates/pages/product-detail.html:195
+msgid "You Save"
+msgstr "Вы экономите"
+
+#: home/templates/pages/product-detail.html:205
+msgid "Hurry! Only"
+msgstr "Торопиться ! Только"
+
+#: home/templates/pages/product-detail.html:205
+msgid "left in stock"
+msgstr "осталось в наличии"
+
+#: home/templates/pages/product-detail.html:206
+msgid "Hours"
+msgstr "Часы"
+
+#: home/templates/pages/product-detail.html:213
+msgid "Available colors"
+msgstr "Доступные цвета"
+
+#: home/templates/pages/product-detail.html:245
+msgid ""
+"You can buy the product after registration ! Please register and enter your "
+"personal information, then you can transfer money to your account and "
+"purchase the product ! 🔔"
+msgstr ""
+"Купить товар можно после регистрации! Пожалуйста, зарегистрируйтесь и "
+"введите свои персональные данные, после чего вы сможете перевести деньги на "
+"свой счет и приобрести товар 🔔"
+
+#: home/templates/pages/product-detail.html:245
+msgid "Registration"
+msgstr "Registration"
+
+#: home/templates/pages/product-detail.html:257
+msgid "Safe Payment"
+msgstr "Безопасная оплата"
+
+#: home/templates/pages/product-detail.html:257
+msgid "Pay with the world's most payment methods"
+msgstr "Оплачивайте большинством способов оплаты в мире"
+
+#: home/templates/pages/product-detail.html:261
+msgid "Confidence"
+msgstr "Уверенность"
+
+#: home/templates/pages/product-detail.html:261
+msgid "Protection covers your purchase and personal data"
+msgstr "Защита распространяется на вашу покупку и личные данные."
+
+#: home/templates/pages/product-detail.html:265
+msgid "Worldwide Delivery"
+msgstr "Доставка по всему миру"
+
+#: home/templates/pages/product-detail.html:265
+msgid "FREE  fast shipping to over 200+ countries regions"
+msgstr "БЕСПЛАТНАЯ быстрая доставка и более 12+ горидов"
+
+#: home/templates/pages/product-detail.html:269
+msgid "Hotline"
+msgstr "Горячая линия"
+
+#: home/templates/pages/product-detail.html:269
+msgid "Talk to help line for your question on 4141 456 789, 4125 666 888"
+msgstr "Позвоните на справочную линию по телефону 4141 456 789, 4125"
+
+#: home/templates/pages/product-detail.html:278
+msgid "Product Details"
+msgstr "Информация о продукте"
+
+#: home/templates/pages/product-detail.html:279
+msgid "Product Reviews"
+msgstr "Комментарии к продукту"
+
+#: home/templates/post-method/comment_post.html:10
+#: home/templates/post-method/contact_post.html:10
+#: home/templates/post-method/news_post.html:10
+#: home/templates/post-method/order_post.html:9
+#: home/templates/post-method/payment_post.html:10
+#: home/templates/post-method/post-shopcart.html:10
+msgid "Great !"
+msgstr "Отличная работа !"
+
+#: home/templates/post-method/comment_post.html:13
+#: home/templates/post-method/news_post.html:13
+msgid "Your comment has been sent. Thank you !"
+msgstr "Ваш комментарий отправлен. Спасибо !"
+
+#: home/templates/post-method/comment_post.html:28
+#: home/templates/post-method/news_post.html:28
+msgid "Your comment has not been sent !"
+msgstr "Ваш комментарий не отправлен !"
+
+#: home/templates/post-method/contact_post.html:13
+msgid "Your message has been sent. Thank you !"
+msgstr "Ваше сообщение было отправлено. Спасибо !"
+
+#: home/templates/post-method/contact_post.html:28
+msgid "Your message has not been sent !"
+msgstr "Ваше сообщение не отправлено!"
+
+#: home/templates/post-method/order_post.html:12
+msgid ""
+"Thank you for your purchase. Your shopping cart has been emptied. You can "
+"view your purchased products in your personal account!"
+msgstr ""
+"Спасибо за покупку. Ваша корзина пуста. Посмотреть купленные товары вы "
+"можете в личном кабинете!"
+
+#: home/templates/post-method/order_post.html:27
+#: home/templates/post-method/post-shopcart.html:28
+msgid ""
+"Your selected product was not added to the shopping cart, please try again !"
+msgstr "Выбранный вами товар не был добавлен в корзину, попробуйте еще раз!"
+
+#: home/templates/post-method/order_post.html:42
+msgid ""
+"There are not enough funds in your personal account for your purchase, "
+"please top up your account !"
+msgstr ""
+"На вашем личном счете недостаточно средств для совершения покупки, "
+"пожалуйста, пополните свой счет !"
+
+#: home/templates/post-method/order_post.html:55
+msgid "No Available !"
+msgstr "Нет в наличии !"
+
+#: home/templates/post-method/order_post.html:58
+msgid "The product you want to buy is not available now !"
+msgstr "Товар, который вы хотите купить, сейчас недоступен !"
+
+#: home/templates/post-method/payment_post.html:13
+msgid "Funds has been successfully transferred to your account !"
+msgstr "Средства успешно переведены на ваш счет !"
+
+#: home/templates/post-method/payment_post.html:28
+msgid "There is an error in transferring funds to the account!"
+msgstr "Возникла ошибка при переводе средств на счет !"
+
+#: home/templates/post-method/post-shopcart.html:13
+msgid "Your selected product has been successfully added to your shopping cart"
+msgstr "Выбранный вами товар был успешно добавлен в корзину"
+
+#~ msgid "Name"
+#~ msgstr "Имя"

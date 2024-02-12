@@ -1,0 +1,71 @@
+{% load static %}
+{% load i18n %}
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog success-madal modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-check" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">{% trans "Great !"%}</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: #1f6200;">{% trans "Funds has been successfully transferred to your account !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ErrorModal" class="modal fade">
+    <div class="modal-dialog error-modal modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-exclamation-triangle" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">No !</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: red;">{% trans "There is an error in transferring funds to the account!"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById('payment');
+        if (form){
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const price = document.getElementById('price');
+            const csrf = document.getElementsByName('csrfmiddlewaretoken');
+            const url = 'http://127.0.0.1:8000/UpdateTotalPriceAPIView/';
+            const payment_post = new FormData();
+            payment_post.append('csrfmiddlewaretoken', csrf[0].value);
+            payment_post.append('price', price.value);
+            try {
+                const response = await axios.post(url, payment_post, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+                if (response.status === 201) {
+                    console.log(response.data);
+                    setTimeout(() => {
+                        $('#myModal').modal('show');
+                        price.value = '';
+                        }, 1200);
+                    setTimeout(() => {
+                        $('#myModal').modal('hide');}, 3500);
+                }
+            } catch (error) {
+                if (error.response.status === 400) {
+                    setTimeout(() => {
+                        $('#ErrorModal').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#ErrorModal').modal('hide');
+                    }, 3500);}
+                }
+            });}
+        });
+</script>

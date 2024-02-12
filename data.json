@@ -1,0 +1,1431 @@
+[
+  {
+    "model": "home.information",
+    "pk": 1,
+    "fields": {
+      "title": "Online Shop",
+      "city": "Tashkent",
+      "country": "Uzbekistan",
+      "address": "Toshkent shaxar Yunusobod",
+      "phone": "+998933861995",
+      "email": "OnlineShop@gmail.com",
+      "about_us": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32</p>",
+      "about_us_en": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32</p>",
+      "about_us_ru": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32</p>",
+      "about_us_uz": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32</p>",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/",
+      "telegram": "https://web.telegram.org/",
+      "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.879265467378!2d69.24691737475885!3d41.33323867130673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b09734fd941%3A0x2df6531486ff457!2sAl-Jabr%20xususiy%20maktab!5e0!3m2!1sru!2s!4v1707484535238!5m2!1sru!2s",
+      "repair": "18:15:51",
+      "status": "Open",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 1,
+    "fields": {
+      "title": "Apple Айпады",
+      "title_en": "Apple Ipads",
+      "title_ru": "Apple Айпады",
+      "title_uz": "Apple Ipadlar",
+      "status": "Yes",
+      "code": "BFNECEFA",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 2,
+    "fields": {
+      "title": "Apple Телефоны",
+      "title_en": "Apple Mobile",
+      "title_ru": "Apple Телефоны",
+      "title_uz": "Apple Telefo'nlar",
+      "status": "Yes",
+      "code": "I7JWMJQB",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 3,
+    "fields": {
+      "title": "Apple Ноутбуки",
+      "title_en": "Apple Laptops",
+      "title_ru": "Apple Ноутбуки",
+      "title_uz": "Apple Noutbuklari",
+      "status": "Yes",
+      "code": "EYQDCFLZ",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 4,
+    "fields": {
+      "title": "Apple Часы",
+      "title_en": "Apple Watches",
+      "title_ru": "Apple Часы",
+      "title_uz": "Apple Soatlari",
+      "status": "Yes",
+      "code": "P3JIL2IQ",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 5,
+    "fields": {
+      "title": "Samsung Телефоны",
+      "title_en": "Samsung Mobile",
+      "title_ru": "Samsung Телефоны",
+      "title_uz": "Samsung Telefo'nlar",
+      "status": "Yes",
+      "code": "CI30CYCM",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 6,
+    "fields": {
+      "title": "Samsung Табы",
+      "title_en": "Samsung Tabs",
+      "title_ru": "Samsung Табы",
+      "title_uz": "Samsung Tablari",
+      "status": "Yes",
+      "code": "B94KGZZI",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 7,
+    "fields": {
+      "title": "Samsung Ноутбуки",
+      "title_en": "Samsung Laptops",
+      "title_ru": "Samsung Ноутбуки",
+      "title_uz": "Samsung Noutbuklari",
+      "status": "Yes",
+      "code": "HGHQ1XLF",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 8,
+    "fields": {
+      "title": "Hp Ноутбуки",
+      "title_en": "Hp Laptops",
+      "title_ru": "Hp Ноутбуки",
+      "title_uz": "Hp Noutbuklari",
+      "status": "Yes",
+      "code": "YU9LBONA",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 9,
+    "fields": {
+      "title": "Xiaomi Телефоны",
+      "title_en": "Xiaomi Mobile",
+      "title_ru": "Xiaomi Телефоны",
+      "title_uz": "Xiaomi Telefo'nlar",
+      "status": "Yes",
+      "code": "JUU877VF",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.category",
+    "pk": 10,
+    "fields": {
+      "title": "Xiaomi Пади",
+      "title_en": "Xiaomi Pads",
+      "title_ru": "Xiaomi Пади",
+      "title_uz": "Xiaomi Padlari",
+      "status": "Yes",
+      "code": "X4LJS0YA",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 1,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 15 Pro Max, 1024 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 15 Pro Max, 1024 GB, Natural titanium",
+      "title_ru": "Apple iPhone 15 Pro Max, 1024 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 15 Pro Max, 1024 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" style=\"height:100%; width:100%\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" style=\"height:100%; width:100%\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" style=\"height:100%; width:100%\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" style=\"height:100%; width:100%\" /></p>",
+      "old_price": 30000000,
+      "new_price": 29447000,
+      "total_count": 10,
+      "order_count": 5,
+      "image": "images/Product/P_Apple_15_Promax.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_15_Pro_Max_1024_ГБ_Натуральный_титан.png",
+      "code": "8FVDI04X",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 14 Pro Max, 256 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 14 Pro Max, 256 GB, Natural titanium",
+      "title_ru": "Apple iPhone 14 Pro Max, 256 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 14 Pro Max, 256 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 12000000,
+      "new_price": 10000000,
+      "total_count": 10,
+      "order_count": 6,
+      "image": "images/Product/P-Apple_14_Promax-1_KnUUiQt.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_14_Pro_Max_256_ГБ_Натуральный_титан_0XJE4Ql.png",
+      "code": "QJFG4OQS",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 13 Pro Max, 128 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 13 Pro Max, 128 GB, Natural titanium",
+      "title_ru": "Apple iPhone 13 Pro Max, 128 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 13 Pro Max, 128 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 10000000,
+      "new_price": 9000000,
+      "total_count": 10,
+      "order_count": 5,
+      "image": "images/Product/P-Apple_13_Promax-1.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_13_Pro_Max_128_ГБ_Натуральный_титан.png",
+      "code": "XS8KOD5G",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 12 Pro Max, 258 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 12 Pro Max, 258 GB, Natural titanium",
+      "title_ru": "Apple iPhone 12 Pro Max, 258 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 12 Pro Max, 258 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 9000000,
+      "new_price": 8000000,
+      "total_count": 10,
+      "order_count": 4,
+      "image": "images/Product/P-Apple_12_Promax-1.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_12_Pro_Max_258_ГБ_Натуральный_титан.png",
+      "code": "RVRJPBDZ",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 11 Pro Max, 128 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 11 Pro Max, 128 GB, Natural titanium",
+      "title_ru": "Apple iPhone 11 Pro Max, 128 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 11 Pro Max, 128 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 8000000,
+      "new_price": 7000000,
+      "total_count": 15,
+      "order_count": 5,
+      "image": "images/Product/P-Apple_11_Promax-1.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_11_Pro_Max_128_ГБ_Натуральный_титан.png",
+      "code": "X7ZA6HM9",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone Xs Max, 256 GB,",
+      "title_en": "Apple iPhone Xs Max, 256 GB,",
+      "title_ru": "Apple iPhone Xs Max, 256 GB,",
+      "title_uz": "Apple iPhone  Xs Max, 256 GB,",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" style=\"height:100%; width:100%\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" style=\"height:100%; width:100%\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" style=\"height:100%; width:100%\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" style=\"height:100%; width:100%\" /></p>",
+      "old_price": 6000000,
+      "new_price": 5000000,
+      "total_count": 14,
+      "order_count": 6,
+      "image": "images/Product/P-Apple_XS_Max_1.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_Xs_Max_256_GB.png",
+      "code": "VWL35BOE",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 7,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone XR Max, 128 GB",
+      "title_en": "Apple iPhone XR Max, 128 GB",
+      "title_ru": "Apple iPhone XR Max, 128 GB",
+      "title_uz": "Apple iPhone XR Max, 128 GB",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "old_price": 6000000,
+      "new_price": 5000000,
+      "total_count": 22,
+      "order_count": 14,
+      "image": "images/Product/P-Apple_XR_Max_1.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_XR_Max_128_GB.png",
+      "code": "UZ6YPZYJ",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone X 128 GB",
+      "title_en": "Apple iPhone X 128 GB",
+      "title_ru": "Apple iPhone X 128 GB",
+      "title_uz": "Apple iPhone X 128 GB",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/banner-xs-max.png\" /></p>",
+      "old_price": 5000000,
+      "new_price": 4500000,
+      "total_count": 8,
+      "order_count": 2,
+      "image": "images/Product/P-Apple_X_1_LPgI4U0.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_X_128_GB_jFmHLJp.png",
+      "code": "QVUV4LUM",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 9,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 15 Pro Plus, 528 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 15 Pro Plus, 528 GB, Natural titanium",
+      "title_ru": "Apple iPhone 15 Pro Plus, 528 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 15 Pro Plus, 528 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 30000000,
+      "new_price": 29447000,
+      "total_count": 10,
+      "order_count": 5,
+      "image": "images/Product/P-Apple_15_Promax-2_974dnlZ.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_15_Pro_Plus_528_ГБ_Натуральный_титан.png",
+      "code": "66PXFVJO",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 10,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 14 Pro Plus, 528 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 14 Pro Plus, 528 GB, Natural titanium",
+      "title_ru": "Apple iPhone 14 Pro Plus, 528 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 13 Pro Plus, 528 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 16500000,
+      "new_price": 13800000,
+      "total_count": 14,
+      "order_count": 8,
+      "image": "images/Product/P-Apple_15_Promax-4_3NvREdp.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_14_Pro_Plus_528_ГБ_Натуральный_титан_0v2cGwc.png",
+      "code": "LSHY0U7F",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 11,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 15 Pro 528 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 15 Pro 528 GB, Natural titanium",
+      "title_ru": "Apple iPhone 15 Pro 528 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 15 Pro 528 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 30000000,
+      "new_price": 28447000,
+      "total_count": 15,
+      "order_count": 6,
+      "image": "images/Product/P-Apple_15_Promax-5.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_15_Pro_528_ГБ_Натуральный_титан.png",
+      "code": "1B6SDDZH",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 14 Pro 256 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 14 Pro 528 GB, Natural titanium",
+      "title_ru": "Apple iPhone 14 Pro 256 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 14 Pro, 256 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 12000000,
+      "new_price": 10000000,
+      "total_count": 13,
+      "order_count": 6,
+      "image": "images/Product/P-Apple_13_Promax-4.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_14_Pro_256_ГБ_Натуральный_титан.png",
+      "code": "PD55BCMX",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 13,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 13 Pro 128 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 13 Pro 128 GB, Natural titanium",
+      "title_ru": "Apple iPhone 13 Pro 128 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 13 Pro 128 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 10000000,
+      "new_price": 8000000,
+      "total_count": 15,
+      "order_count": 8,
+      "image": "images/Product/P-Apple_13_Promax-2.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_13_Pro_128_ГБ_Натуральный_титан.png",
+      "code": "IY7UZY2V",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 14,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 12 Pro 258 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 12 Pro 258 GB, Natural titanium",
+      "title_ru": "Apple iPhone 12 Pro 258 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 12 Pro 258 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 9000000,
+      "new_price": 8000000,
+      "total_count": 19,
+      "order_count": 12,
+      "image": "images/Product/P-Apple_12_Promax-1_qDOvjM8_wXq06D9.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_12_Pro_258_ГБ_Натуральный_титан.png",
+      "code": "OOZ8UGMB",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 15,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 13 Plus 128 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 13 Plus 128 GB, Natural titanium",
+      "title_ru": "Apple iPhone 13 Plus 128 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 13 Plus 128 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 10000000,
+      "new_price": 9000000,
+      "total_count": 13,
+      "order_count": 2,
+      "image": "images/Product/P-Apple_13_Promax-4_iN5NtyT.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_13_Plus_128_ГБ_Натуральный_титан.png",
+      "code": "3PDNCCCY",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product",
+    "pk": 16,
+    "fields": {
+      "category": 2,
+      "title": "Apple iPhone 12 Plus 258 ГБ, Натуральный титан",
+      "title_en": "Apple iPhone 12 Plus 258 GB, Natural titanium",
+      "title_ru": "Apple iPhone 12 Plus 258 ГБ, Натуральный титан",
+      "title_uz": "Apple iPhone 12 Plus 258 GB, Natural titanium",
+      "description_full": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_en": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_ru": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "description_full_uz": "<p><img alt=\"\" src=\"/media/images/2024/02/09/iphone-pro-main-cam-slide.jpeg\" /></p>",
+      "old_price": 9000000,
+      "new_price": 8000000,
+      "total_count": 18,
+      "order_count": 6,
+      "image": "images/Product/P-Apple_13_Promax-3.jpg",
+      "status": "Yes",
+      "qr_code": "images/Product/Qr_Code/Apple_iPhone_12_Plus_258_ГБ_Натуральный_титан.png",
+      "code": "APKFOL4R",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "color": "#A59E94",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P_Apple_15_Promax.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 3,
+    "fields": {
+      "product": 1,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_15_Promax-3.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 4,
+    "fields": {
+      "product": 1,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 5,
+    "fields": {
+      "product": 1,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 6,
+    "fields": {
+      "product": 2,
+      "color": "#A59E94",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2_YjC9f2Z.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 7,
+    "fields": {
+      "product": 2,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 8,
+    "fields": {
+      "product": 2,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_15_Promax-3_ud7l67n.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 9,
+    "fields": {
+      "product": 2,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4_zZc7wT1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 10,
+    "fields": {
+      "product": 2,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_y20Ha9f.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 11,
+    "fields": {
+      "product": 3,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 12,
+    "fields": {
+      "product": 3,
+      "color": "#8FB4CF",
+      "image": "",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 13,
+    "fields": {
+      "product": 3,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_13_Promax-3.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 14,
+    "fields": {
+      "product": 3,
+      "color": "#635D59",
+      "image": "images/Product_Elements/P-Apple_13_Promax-4_zfnbOWy.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 15,
+    "fields": {
+      "product": 3,
+      "color": "#D1F9E7",
+      "image": "images/Product_Elements/P-Apple_13_Promax-5.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 16,
+    "fields": {
+      "product": 3,
+      "color": "#FF1818",
+      "image": "images/Product_Elements/P-Apple_13_Promax-6.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 17,
+    "fields": {
+      "product": 4,
+      "color": "#6B747A",
+      "image": "images/Product_Elements/P-Apple_15_Promax-3_BpIkuOZ.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 18,
+    "fields": {
+      "product": 4,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_gvjbD4O.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 19,
+    "fields": {
+      "product": 4,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_XbpUsz8.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 20,
+    "fields": {
+      "product": 4,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_13_Promax-3_O0NapcB.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 21,
+    "fields": {
+      "product": 4,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4_YFyH3qB.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 22,
+    "fields": {
+      "product": 5,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_13_Promax-4.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 23,
+    "fields": {
+      "product": 5,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_Ym7CM6I.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 24,
+    "fields": {
+      "product": 5,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_vSB54ap.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 25,
+    "fields": {
+      "product": 5,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4_tD7m4LV.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 26,
+    "fields": {
+      "product": 5,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_15_Promax-3_x6tT7xX.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 27,
+    "fields": {
+      "product": 6,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_13_Promax-4_F8shB0I.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 28,
+    "fields": {
+      "product": 6,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_12_Promax-1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 29,
+    "fields": {
+      "product": 6,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_13_Promax-3_pXN37T1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 30,
+    "fields": {
+      "product": 6,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_13_Promax-1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 31,
+    "fields": {
+      "product": 6,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_XvVi32A.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 32,
+    "fields": {
+      "product": 7,
+      "color": "#635D59",
+      "image": "images/Product_Elements/P-Apple_11_Promax-1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 33,
+    "fields": {
+      "product": 7,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2_zZZqshD.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 34,
+    "fields": {
+      "product": 7,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_dd4qkFU.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 35,
+    "fields": {
+      "product": 7,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_13_Promax-3_uzDK4vm.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 36,
+    "fields": {
+      "product": 7,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_LbOPPKL.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 37,
+    "fields": {
+      "product": 8,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_BDXKkCd.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 38,
+    "fields": {
+      "product": 8,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_13_Promax-3_zUQvbTf.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 39,
+    "fields": {
+      "product": 8,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_12_Promax-1_BPTR1et.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 40,
+    "fields": {
+      "product": 8,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_13_Promax-1_8odnpin.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 41,
+    "fields": {
+      "product": 8,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_13_Promax-4_65tpUEm.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-09"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 42,
+    "fields": {
+      "product": 9,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_Q9KSRf2.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 43,
+    "fields": {
+      "product": 9,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_bCb0k2s.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 44,
+    "fields": {
+      "product": 9,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_K7EkJrm.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 45,
+    "fields": {
+      "product": 9,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4_48aWTkV.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 46,
+    "fields": {
+      "product": 9,
+      "color": "#635D59",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_dvEFA6Q.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 47,
+    "fields": {
+      "product": 10,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_Sr6SIqy.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 48,
+    "fields": {
+      "product": 10,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2_jmC8jpe.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 49,
+    "fields": {
+      "product": 10,
+      "color": "#635D59",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_B860yjN.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 50,
+    "fields": {
+      "product": 10,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_bs6Ug23.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 51,
+    "fields": {
+      "product": 10,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4_VgEQCFb.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 52,
+    "fields": {
+      "product": 11,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_hWGJ9Bs.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 53,
+    "fields": {
+      "product": 11,
+      "color": "#8FB4CF",
+      "image": "images/Product_Elements/P-Apple_13_Promax-1_SJu49jt_fxUrsZq_92ku0nt.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 54,
+    "fields": {
+      "product": 11,
+      "color": "#FF1818",
+      "image": "images/Product_Elements/P-Apple_13_Promax-6_dRHWEQx.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 55,
+    "fields": {
+      "product": 11,
+      "color": "#D1F9E7",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2_7EUEiGi_o6JDVBw.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 56,
+    "fields": {
+      "product": 11,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_13_Promax-3_71QEgK4.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 57,
+    "fields": {
+      "product": 12,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_iEGeqqU.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 58,
+    "fields": {
+      "product": 12,
+      "color": "#373737",
+      "image": "images/Product_Elements/P-Apple_15_Promax-3_eEHeE5V.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 59,
+    "fields": {
+      "product": 12,
+      "color": "#D9D9D9",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2_e2koCQJ.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 60,
+    "fields": {
+      "product": 12,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_MOjKtqr.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 61,
+    "fields": {
+      "product": 12,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_f1Bxe5q.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 62,
+    "fields": {
+      "product": 13,
+      "color": "#8FB4CF",
+      "image": "images/Product_Elements/P-Apple_13_Promax-1_uQ5OXet.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 63,
+    "fields": {
+      "product": 13,
+      "color": "#FF1818",
+      "image": "images/Product_Elements/P-Apple_13_Promax-6_zjh0GSS.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 64,
+    "fields": {
+      "product": 13,
+      "color": "#635D59",
+      "image": "images/Product_Elements/P-Apple_12_Promax-1_9LYuDBL.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 65,
+    "fields": {
+      "product": 13,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-2_WUI67b0.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 66,
+    "fields": {
+      "product": 13,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_9JUdaTq.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 67,
+    "fields": {
+      "product": 14,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_WB5PVAa.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 68,
+    "fields": {
+      "product": 14,
+      "color": "#FF1818",
+      "image": "images/Product_Elements/P-Apple_13_Promax-6_8Tm3UW3.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 69,
+    "fields": {
+      "product": 14,
+      "color": "#D1F9E7",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_C63kvc0.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 70,
+    "fields": {
+      "product": 14,
+      "color": "#635D59",
+      "image": "images/Product_Elements/P-Apple_15_Promax-3_IzJIYLO.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 71,
+    "fields": {
+      "product": 14,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-4_ghv8vE8.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 72,
+    "fields": {
+      "product": 15,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_ghxhVlO.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 73,
+    "fields": {
+      "product": 15,
+      "color": "#FF1818",
+      "image": "images/Product_Elements/P-Apple_13_Promax-6_ZdE2aY5.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 74,
+    "fields": {
+      "product": 15,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_BK8FdeU.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 75,
+    "fields": {
+      "product": 15,
+      "color": "#D1F9E7",
+      "image": "images/Product_Elements/P-Apple_13_Promax-1_ePFXWgQ.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 76,
+    "fields": {
+      "product": 15,
+      "color": "#FCD1C6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_RihNm0o.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 77,
+    "fields": {
+      "product": 16,
+      "color": "#586957",
+      "image": "images/Product_Elements/P-Apple_13_Promax-2_Wu9ULz5.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 78,
+    "fields": {
+      "product": 16,
+      "color": "#35384C",
+      "image": "images/Product_Elements/P-Apple_15_Promax-1_CuBWJy4.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 79,
+    "fields": {
+      "product": 16,
+      "color": "#8FB4CF",
+      "image": "images/Product_Elements/P-Apple_13_Promax-1_pgTGGx1.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 80,
+    "fields": {
+      "product": 16,
+      "color": "#FF1818",
+      "image": "images/Product_Elements/P-Apple_13_Promax-6_zQbrUSq.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "home.product_elements",
+    "pk": 81,
+    "fields": {
+      "product": 16,
+      "color": "#EBDAC6",
+      "image": "images/Product_Elements/P-Apple_15_Promax-5_V7uQv8e.jpg",
+      "status": "Yes",
+      "create_at": "2024-02-10"
+    }
+  }
+]

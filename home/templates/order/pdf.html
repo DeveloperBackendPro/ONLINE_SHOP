@@ -1,0 +1,111 @@
+{% load static %}
+{% load i18n %}
+<div style="width: 1000px;" hidden>
+    <section id="html-page" class="theme-invoice-1" style="padding-top: 0; padding-bottom: 0;">
+        <div class="container-xxl" style="background-color: white;">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 mx-auto" style="padding: 0;">
+                    <div class="invoice-wrapper">
+                        <div class="invoice-header">
+                            <div class="header-image">
+                                <img src="{% static 'assets/images/logo.svg' %}" class="img-fluid" alt="logo" loading="lazy">
+                            </div>
+                            <div class="header-content">
+                                <h3>Invoice</h3>
+                            </div>
+                        </div>
+                        <div class="invoice-body">
+                            <div class="top-sec">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="details-box">
+                                            <div class="address-box" style="background-color: #f2f2f4; border: 1px dashed red;">
+                                                <ul>
+                                                    <li style="white-space: normal;" >Country : {{ order_client.country }}</li>
+                                                    <li style="white-space: normal;" >City : {{ order_client.city }}</li>
+                                                    <li style="white-space: normal;" >Phone : {{ order_client.phone }}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="address-box" style="background-color: #f2f2f4; border: 1px dashed red;">
+                                                <ul>
+                                                    <li style="color: black; white-space: normal;">Issue Date : {{ order_client.create_at }}</li>
+                                                    <li style="color: black; white-space: normal;">Invoice No : {{ order_client.code }}</li>
+                                                    <li style="color: black; white-space: normal;">Email : {{ order_client.client.user.email }}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-12" style="padding-left: 0; padding-right: 0;">
+                                            <div class="details-box">
+                                                <div class="address-box" style="background-color: #f2f2f4; border: 1px dashed red;">
+                                                    <ul>
+                                                        <li style="color: black; border-bottom: 1px dashed black; white-space: normal; "><span style="color: red;">Full Name : </span> {{ order_client.first_name }} {{ order_client.last_name }}</li>
+                                                        <li style="color: black; border-bottom: 1px dashed black; white-space: normal; "><span style="color: red;">Zip code : </span> {{ order_client.zip_code }} </li>
+                                                        <li style="color: black; border-bottom: 1px dashed black; white-space: normal;  white-space: normal; text-align: justify;"><span style="color: red;">Order Note : </span> {{ order_client.order_note }} </li>
+                                                        <li style="color: black; white-space: normal; border-bottom: 1px dashed black;"><span style="color: red;">Address : </span> {{ order_client.address }} </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="table-responsive border-0">
+                                <table class="table align-middle p-4 mb-0" style="background-color: #f2f2f4;">
+                                    <tbody>
+                                    <tr>
+                                        <td style="border-bottom: 1px dashed red; border-left: 1px dashed red; border-top: 1px dashed red;">
+                                            <div class="d-flex align-items-center">
+                                                <div style="width: 75px;">
+                                                    <img src="{{ order_client.product.image.url }}" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="mb-0 ms-2" style="padding-left: 20px;">
+                                                    <div class="overflow-hidden">
+                                                        <div style="width: auto; height: 15px; background-color: {{ order_client.color }};"></div>
+                                                        <h6 class="mb-0 text-end" id="native-float">{{ order_client.product.title }}</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="color: black; border-bottom: 1px dashed red; border-top: 1px dashed red;">{{ order_client.product.new_price }} sum</td>
+                                         <td style="color: black; border-bottom: 1px dashed red; border-top: 1px dashed red;">{{ order_client.quantity }} quantity</td>
+                                        <td style="color: black; border-bottom: 1px dashed red; border-top: 1px dashed red; border-right: 1px dashed red;">{{ order_client.total_price }} sum</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="width: 100%; height: 5px;"></div>
+                            <h3 style="padding-bottom: 5px;"><strong>Tomonlarning huquq va majburiyatlari</strong></h3>
+                            <p style="color: black; text-align: start; font-family: 'Poppins', sans-serif; font-size: 14px;">1.0. Uning Shaxsiy kabinetidan uning Qayd yozuvidan foydalangan holda amalga oshirilgan har qanday harakat Xaridorning o’zi tomonidan amalga oshirilgan harakat deb hisoblanishini tushunadi.</p>
+                            <p style="color: black; text-align: start; font-family: 'Poppins', sans-serif; font-size: 14px;">1.1. O’z Qayd yozuvi orqali Marketpleysda harakatlarni amalga oshirish orqali u ushbu Foydalanuvchi bitimi matni bilan tanishganligini tasdiqlaydi va uning shartlariga rioya qilish majburiyatini oladi.</p>
+                            <p style="color: black; text-align: start; font-family: 'Poppins', sans-serif; font-size: 14px;">1.2. Tanlangan Buyurtmaning to’g’ri bajarilganligini (summasi, tanlangan Tovar, Tovar miqdori va boshqalar) to’lov amalga oshirilgunga qadar diqqat bilan tekshirishi kerak.</p>
+                            <p style="color: black; text-align: start; font-family: 'Poppins', sans-serif; font-size: 14px;">1.3. U o’z logini (telefon raqami) va parolini uchinchi shaxslarga bermaslik majburiyatini oladi va shu bilan login (telefon raqami) va parolning xavfsizligi uchun shaxsan javobgar bo’ladi.</p>
+                            <p style="color: black; text-align: start; font-family: 'Poppins', sans-serif; font-size: 14px;">1.4. Xaridorning Qayd yozuvidan foydalangan holda Shaxsiy kabinetga ruxsatsiz (Xaridor tomonidan ruxsat etilmagan holda) kirish holatlari va/yoki maxfiylikning har qanday buzilishi (buzilish gumoni) va Shaxsiy kabinetga begona shaxs kirganligi to’g’risida darhol Uzum Marketni xabardor qilishi shart.</p>
+
+                        </div>
+                        <div class="invoice-footer" style="padding-left: 85%; padding-top: 18px;">
+                            <div class="signature-box">
+                                <img src="{{ order_client.qr_code.url }}" class="img-fluid" alt="" style="border: 1px solid black;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+ <script>
+     document.getElementById('dl-pdf').onclick = function (){
+         let element = document.getElementById('html-page');
+         let opt = {
+             filename: '{{ order_client.client.user.first_name }}-{{ order_client.client.user.last_name }}.pdf',
+             image: {type:'png', quality:0.98},
+             html2canvas: {scale:2 },
+             jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'},
+         };
+         html2pdf(element,opt);
+     };
+ </script>

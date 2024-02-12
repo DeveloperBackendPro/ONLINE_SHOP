@@ -1,0 +1,21 @@
+{% load static %}
+{% load i18n %}
+{% if page.has_other_pages %}
+<div class="pagination" style="padding-bottom: 10px;">
+    <ul>
+        {% if page.has_previous %}
+        <li class="prev"><a onclick="window.location.href='?page={{ page.previous_page_number }}'" style="background-color: black; cursor: pointer; border: none;"><i class="fa fa-caret-left" aria-hidden="true" style="color: white; font-weight: 600;"></i></a></li>
+        {% endif %}
+        {% for i in page.paginator.page_range %}
+        {% if page.number == i %}
+        <li><a onclick="window.location.href=''" style="cursor: pointer; background-color: black; color: #00f3b7; font-weight: 600; border: none;">{{ i }}</a></li>
+        {% else %}
+        <li><a onclick="window.location.href='?page={{ i }}'" style="cursor: pointer; background-color: black; color: white; font-weight: 600; border: none;">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if page.has_next %}
+        <li class="next"><a onclick="window.location.href='?page={{ page.next_page_number }}'" style="background-color: black; cursor: pointer; border: none;"><i class="fa fa-caret-right" aria-hidden="true" style="color: white; font-weight: 600;"></i></a></li>
+        {% endif %}
+    </ul>
+</div>
+{% endif %}

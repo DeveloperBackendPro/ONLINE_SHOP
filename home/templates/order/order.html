@@ -1,0 +1,388 @@
+{% load static %}
+{% load i18n %}
+{% if info %}
+{% for info in info %}
+{% if info.status == 'Open' %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/madals.css'%}">
+    <link rel="stylesheet" href="{% static 'register/register.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/style.css'%}">
+</head>
+<body class="page-template belle" oncontextmenu="return false;">
+<div class="pageWrapper">
+    <div class="space" style="width: 100%; height: 1px; background-color: black;">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    {#HEADER START#}
+    <div class="pageWrapper">
+        <div class="top-header">
+            <div class="container product-container">
+                <div class="row">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <p class="phone-no"><i class="anm anm-phone"></i> {{ info.phone }}</p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                        <div class="text-center"><p class="top-header_middle-text">{% trans " Worldwide Express Shipping"%}</p></div>
+                    </div>
+                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                        <ul class="customer-links list-inline">
+                            <li>
+                                <div class="language-dropdown">
+                                    <span class="language-dd">{% trans "Language"%}</span>
+                                    <ul class="text-center" id="language" style="width: 100%; font-size: 16px;">
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/uz/order/'" style="cursor: pointer;">Uzb</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/en/order/'" style="cursor: pointer;">Eng</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/order/'" style="cursor: pointer;">Rus</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a onclick="window.location.href='{% url 'login_form'%}'" style="cursor: pointer;">{% trans "Login"%}</a></li>
+                            {% if user.is_authenticated and user.is_client %}
+                                <li><a onclick="window.location.href='{% url 'client'%}'" style="cursor: pointer;">{{ user.username }}</a></li>
+                            {% else %}
+                                <li><a onclick="window.location.href='{% url 'register'%}'" style="cursor: pointer;">{% trans "Create Account"%}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap animated d-flex border-bottom">
+            <div class="container product-container">
+                <div class="row align-items-center">
+                    <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                        <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                            <img src="{% static 'logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                        </a>
+                    </div>
+                    <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                        <div class="d-block d-lg-none">
+                            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                                <i class="anm anm-bars-r" style="color: black;"></i>
+                            </button>
+                        </div>
+                        <nav class="grid__item" id="AccessibleNav">
+                            <ul id="siteNav" class="site-nav medium center hidearrow">
+                                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                {% if category %}
+                                <li class="lvl1 parent dropdown"><a>{% trans "Category"%}<i class="anm anm-angle-down-l"></i></a>
+                                    <ul class="dropdown">
+                                        {% for rs in category %}
+                                        <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" class="site-nav" style="cursor: pointer;">{{ rs.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                {% endif %}
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}<i class="anm anm-angle-down-l"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                        <div class="logo">
+                            <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                                <img src="{% static 'assets/images/logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                        <div class="site-cart">
+                            {% if user.is_authenticated and user.is_client %}
+                                <a onclick="window.location.href='{% url 'shopcart'%}'" style="cursor: pointer;" title="Cart">
+                                    <i class="icon anm anm-bag-l" style="font-size: 22px;"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="site-header__search">
+                            <button onclick="window.location.href='{% url 'search'%}'" type="button" class="search-trigger" style="cursor: pointer;"><i class="icon anm anm-search-l"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav-wrapper" role="navigation">
+            <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i>{% trans "Close Menu"%}</div>
+            <ul id="MobileNav" class="mobile-nav">
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}</a></li>
+                <li class="lvl1 parent megamenu"><a>{% trans "Category"%}<i class="anm anm-plus-l"></i></a>
+                    {% if category %}
+                       <ul>
+                          {% for rs in category %}
+                          <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" style="cursor: pointer;" class="site-nav">{{ rs.title }}</a></li>
+                          {% endfor %}
+                       </ul>
+                    {% endif %}
+                </li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}</a></li>
+                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {#HEADER END#}
+    {% if shopcart %}
+    <div id="page-content" style="padding-bottom: 50px; background-color: #221446;">
+        <br>
+        <div class="container product-container">
+        	<div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="customer-box returning-customer text-center">
+                        <h3>{% trans "Fill out all the fields when making a purchase !"%}</h3>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="customer-box customer-coupon text-center">
+                        <h3 class="font-15 xs-font-13">{% trans "Find out the details of your purchase !"%}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row billing-fields">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
+                    <div class="create-ac-content bg-light-gray padding-20px-all">
+                        <form id="add-order" method="post">
+                            {% csrf_token %}
+                            <fieldset>
+                                <h2 class="login-title mb-3" style="color: white;">{% trans "Billing details"%}</h2>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-firstname" style="color: white;">{% trans "First Name"%}<span class="required-f">*</span></label>
+                                        <input name="first_name" id="first_name" type="text" style="color: white;">
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-lastname" style="color: white;">{% trans "Last Name"%}<span class="required-f">*</span></label>
+                                        <input name="last_name" id="last_name" type="text" style="color: white;">
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-firstname" style="color: white;">{% trans "Phone"%}<span class="required-f">*</span></label>
+                                        <input name="phone" id="phone" type="text" style="color: white;">
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-lastname" style="color: white;">{% trans "Zip code"%}<span class="required-f">*</span></label>
+                                        <input name="zip_code" id="zip_code" type="number" style="color: white;">
+                                    </div>
+                                    <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                        <label for="input-lastname" style="color: white;">{% trans "Address"%}<span class="required-f">*</span></label>
+                                        <input name="address" id="address" type="text" style="color: white;">
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-country" style="color: white;">{% trans "Country"%}<span class="required-f">*</span></label>
+                                        <select name="country" id="country" style="color: white;">
+                                            <option value="Uzbekistan" style="color: white;">Uzbekistan</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-country" style="color: white;">{% trans "City"%} <span class="required-f">*</span></label>
+                                        <select name="city" id="city" style="color: white;">
+                                            <option value="Toshkent Shaxar" style="color: black;">Toshkent Shaxar</option>
+                                            <option value="Toshkent Viloyati" style="color: black;">Toshkent Viloyati</option>
+                                            <option value="Andijon Viloyati" style="color: black;">Andijon Viloyati</option>
+                                            <option value="Fargona Viloyati" style="color: black;">Fargona Viloyati</option>
+                                            <option value="Namangan Viloyati" style="color: black;">Namangan Viloyati</option>
+                                            <option value="Sirdaryo Viloyati" style="color: black;">Sirdaryo Viloyati</option>
+                                            <option value="Jizzah Viloyati" style="color: black;">Jizzah Viloyati</option>
+                                            <option value="Samarqand Viloyati" style="color: black;">Samarqand Viloyati</option>
+                                            <option value="Qashqadaryo Viloyati" style="color: black;">Qashqadaryo Viloyati</option>
+                                            <option value="Surhandaryo Viloyati" style="color: black;">Surhandaryo Viloyati</option>
+                                            <option value="Buxoro Viloyati" style="color: black;">Buxoro Viloyati</option>
+                                            <option value="Navoiy Viloyati" style="color: black;">Navoiy Viloyati</option>
+                                            <option value="Xorazim Viloyati" style="color: black;">Xorazim Viloyati</option>
+                                            <option value="Qoraqalpog'iston Respublikasi" style="color: black;">Qoraqalpog'iston Respublikasi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="form-group col-md-12 col-lg-12 col-xl-12">
+                                        <label for="input-company" style="color: white;">{% trans "Order Notes"%} <span class="required-f">*</span></label>
+                                        <textarea name="order_note" id="order_note" class="form-control resize-both" rows="3" style="background-color: transparent; color: white;"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="order-button-payment">
+                                <button id="submit" class="btn" value="Place order" type="submit">{% trans "Place order"%}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="your-order-payment">
+                        <div class="your-order">
+                            <h2 class="order-title mb-4" style="color: white;">{% trans "Your Order"%}</h2>
+                            <div class="table-responsive-sm order-table">
+                                <table class="bg-white table table-bordered table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" style="background-color: #221446; color: white;">{% trans "Product Name"%}</th>
+                                            <th class="text-center" style="background-color: #221446; color: white;">{% trans "Price"%}</th>
+                                            <th class="text-center" style="background-color: #221446; color: white;">{% trans "Quantity"%}</th>
+                                            <th class="text-center" style="background-color: #221446; color: white;">{% trans "Total"%}</th>
+                                            <th class="text-center" style="background-color: #221446; color: white;">{% trans "Color"%}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in shopcart %}
+                                        <tr>
+                                            <td class="text-center" style="background-color: #221446; color: white;">{{ item.product.title | slice:"40" }}</td>
+                                            <td class="text-center" style="background-color: #221446; color: white;">{{ item.product.new_price }}</td>
+                                            <td class="text-center" style="background-color: #221446; color: white;">{{ item.quantity }}</td>
+                                            <td class="text-center" style="background-color: #221446; color: white;">
+                                                {{ item.calculate_total_price }}
+                                            </td>
+                                            <td class="text-center" style="background-color: {{ item.color }};"></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                    <tfoot class="font-weight-600">
+                                        <tr>
+                                            <td colspan="4" class="text-right" style="background-color: #221446; color: white;">{% trans "Quantity"%}</td>
+                                            <td style="background-color: #221446; color: white;">{{ total_qty }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="text-right" style="background-color: #221446; color: white;">{% trans "Total Price"%}</td>
+                                            <td style="background-color: #221446; color: white;">{{ total }} {% trans "sum"%}</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="your-payment">
+                            <h2 class="payment-title mb-3" style="color: white;">{% trans "payment method"%}</h2>
+                            <div class="payment-method">
+                                <div class="payment-accordion">
+                                    <div id="accordion" class="payment-section">
+                                        <div class="card mb-2">
+                                            <div class="card-header" style="background-color: #221446; border-bottom: 1px solid #221446;">
+                                                <a class="card-link" data-toggle="collapse" href="#collapseOne" style="color: white;">{% trans "Direct Bank Transfer"%} </a>
+                                            </div>
+                                            <div id="collapseOne" class="collapse" data-parent="#accordion">
+                                                <div class="card-body" style="background-color: #221446;">
+                                                    <p class="no-margin font-15" style="color: white;">{% trans "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account."%}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2">
+                                            <div class="card-header" style="background-color: #221446; border-bottom: 1px solid #221446;">
+                                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo" style="color: white;">{% trans "Cheque Payment"%}</a>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                                <div class="card-body" style="background-color: #221446;">
+                                                    <p class="no-margin font-15" style="color: white;">{% trans "Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode."%}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card margin-15px-bottom border-radius-none">
+                                            <div class="card-header" style="background-color: #221446; border-bottom: 1px solid #221446;">
+                                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree" style="color: white;"> {% trans "PayPal"%} </a>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                                <div class="card-body" style="background-color: #221446;">
+                                                    <p class="no-margin font-15" style="color: white;">{% trans "Pay via PayPal; you can pay with your credit card if you don't have a PayPal account."%}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     {% else %}
+        <div style="background-color: #221446; padding-top: 80px; padding-bottom: 80px;">
+            <section id="register" style="border: 0.600em solid navy;">
+                <form>
+                    <fieldset>
+                        <legend style="color: black; text-align: center;">{% trans 'Warning' %}</legend>
+                        <div class="input-group">
+                            <div class="col-lg-12">
+                                <p style="text-align: center; color: black; font-size: 16px;">{% trans 'You have not added any products to the shopping cart yet! or because you deleted the Cart is empty !'%}</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+     {% endif %}
+     {% include 'small_templates/footer_slider.html'%}
+     {% include 'footer.html' %}
+     {% include 'post-method/order_post.html' %}
+     <style>
+        @media only screen and (min-width: 1350px) {
+            .product-container {
+                width: 100%;
+                margin-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }}
+    </style>
+     <div class="space" style="width: 100%; height: 1px; background-color: black;">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+     </div>
+     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+     <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/jquery.cookie.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/wow.min.js' %}"></script>
+     <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'assets/js/plugins.js' %}"></script>
+     <script src="{% static 'assets/js/popper.min.js' %}"></script>
+     <script src="{% static 'assets/js/lazysizes.js' %}"></script>
+     <script src="{% static 'assets/js/main.js' %}"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script>
+    $(document).ready(function() {
+      function checkInputs() {
+        var inputs = $('#first_name, #last_name, #phone, #zip_code, #address, #country, #city, #order_note');
+        var button = $('#submit');
+        var allInputsValid = true;
+        inputs.each(function() {
+          if ($(this).val().trim() === '' || $(this).val() === null) {
+            allInputsValid = false;
+            return false;
+          }
+        });
+        button.prop('disabled', !allInputsValid);
+      }
+      $('#add-order input, #add-order textarea, #add-order select').on('input change', function() {
+        checkInputs();
+      });
+      checkInputs();
+    });
+</script>
+</div>
+</body>
+</html>
+{% endif %}
+{% if info.status == 'Close' %}
+{% include 'error/coming-son.html'%}
+{% endif %}
+{% endfor %}
+{% endif %}

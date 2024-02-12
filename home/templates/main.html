@@ -1,0 +1,254 @@
+{% load static %}
+{% load i18n %}
+{% if info %}
+{% for info in info %}
+{% if info.status == 'Open' %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/main.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+</head>
+<body class="home9-parallax" oncontextmenu="return false;">
+{% include 'header.html'%}
+    <div id="page-content">
+        {% include 'banner.html'%}
+        {% if product %}
+         <div class="product-rows section" style="padding-top: 0;">
+        	<div class="container product-container">
+	            <div class="grid-products">
+                	<div class="row">
+                        {% for rs in product %}
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-3 item">
+                            <div class="product-image">
+                                <a onclick="window.location.href='{% url 'product_detail' rs.code %}'" style="cursor: pointer;" class="grid-view-item__link">
+                                    <img class="img-fluid lazyload" src="{{ rs.image.url }}" alt="{{ rs.title }}" title="{{ rs.title }}" loading="lazy" style="object-fit: cover;">
+                                    <div class="product-labels rectangular"><span class="lbl pr-label1" style="background-color: red; color: white; font-weight: 600;">new</span></div>
+                                </a>
+                                <div class="variants add" onclick="window.location.href='{% url 'product_detail' rs.code %}'">
+                                    <button class="btn btn-addto-cart" type="button" tabindex="0">{% trans "Add To Cart"%}</button>
+                                </div>
+                            </div>
+                            <div class="product-details" style="text-align: start;">
+                                <div class="product-name">
+                                    <a onclick="window.location.href='{% url 'product_detail' rs.code %}'" style="cursor: pointer;" style="text-align: justify;">{{ rs.title | slice:"40"}}</a>
+                                </div>
+                                <div class="product-review">
+                                    <a class="reviewLink">
+                                        <i class="font-13 fa fa-star{% if rs.count_rate < 1 %}-o empty{% endif %}"></i>
+                                        <i class="font-13 fa fa-star{% if rs.count_rate < 2 %}-o empty{% endif %}"></i>
+                                        <i class="font-13 fa fa-star{% if rs.count_rate < 3 %}-o empty{% endif %}"></i>
+                                        <i class="font-13 fa fa-star{% if rs.count_rate < 4 %}-o empty{% endif %}"></i>
+                                        <i class="font-13 fa fa-star{% if rs.count_rate < 5 %}-o empty{% endif %}"></i>
+                                        <span class="spr-badge-caption">{{ rs.count_rate | stringformat:".1f" }} • {{ rs.count_product }} {% trans "reviews"%} <span style="color: red;">{{ rs.order_count }} • {% trans "Sold out"%}</span></span>
+                                    </a>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price" style="font-size: 16px; color: white; background-color: #170f2f; border-radius: 5px; font-weight: 400; padding-right: 5px;  padding-left: 5px;">{{ rs.new_price }} {% trans 'sum'%}</span>
+                                    <span class="old-price" style="margin-left: 10px; font-size: 14px">{{ rs.old_price }} {% trans 'sum'%}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+           </div>
+        </div>
+        {% endif %}
+        <div class="section" style="padding-top: 0;">
+        	<div class="container product-container">
+                <div class="row product-row">
+                	 <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-left">
+                         <p>
+                         <a>
+                             <img data-src="{% static 'assets/document/images/m2-pro.png'%}" src="{% static 'assets/document/images/m2-pro.png'%}" alt="M2-PRO" class="img-fluid blur-up lazyload" loading="lazy">
+                         </a>
+                         </p>
+                     </div>
+                     <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-right">
+                         <p>
+                         <a>
+                             <img data-src="{% static 'assets/document/images/15Pro.png'%}" src="{% static 'assets/document/images/15Pro.png'%}" alt="Pop around the world" class="img-fluid blur-up lazyload" loading="lazy">
+                         </a>
+                         </p>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% if product_all %}
+        <div class="section" style="padding-top: 0;">
+        	<div class="container product-container" style="width: 100%;">
+            	<div class="row" style="margin-left: -25px; margin-right: -35px;">
+                	<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="margin-left: -5px;">
+						<div class="productSlider grid-products">
+                            {% for rs in product_all %}
+                            <div class="col-12 item">
+                                <div class="product-image">
+                                    <a onclick="window.location.href='{% url 'product_detail' rs.code %}'" style="cursor: pointer;" class="grid-view-item__link">
+                                        <img class="img-fluid blur-up lazyload" data-src="{{ rs.image.url }}" src="{{ rs.image.url }}" alt="{{ rs.title }}" title="{{ rs.title }}" loading="lazy" style="object-fit: cover;">
+                                        <div class="product-labels rectangular"><span class="lbl pr-label1" style="background-color: red; color: white; font-weight: 600;">new</span></div>
+                                    </a>
+                                    <div class="variants add" onclick="window.location.href='{% url 'product_detail' rs.code %}'">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">{% trans "Add To Cart"%}</button>
+                                    </div>
+                                </div>
+                                <div class="product-details" style="text-align: justify;">
+                                    <div class="product-name">
+                                        <a onclick="window.location.href='{% url 'product_detail' rs.code %}'" style="cursor: pointer;" style="text-align: justify;">{{ rs.title | slice:"40" }}</a>
+                                    </div>
+                                    <div class="product-review">
+                                        <a class="reviewLink">
+                                            <i class="font-13 fa fa-star{% if rs.count_rate < 1 %}-o empty{% endif %}"></i>
+                                            <i class="font-13 fa fa-star{% if rs.count_rate < 2 %}-o empty{% endif %}"></i>
+                                            <i class="font-13 fa fa-star{% if rs.count_rate < 3 %}-o empty{% endif %}"></i>
+                                            <i class="font-13 fa fa-star{% if rs.count_rate < 4 %}-o empty{% endif %}"></i>
+                                            <i class="font-13 fa fa-star{% if rs.count_rate < 5 %}-o empty{% endif %}"></i>
+                                            <span class="spr-badge-caption">{{ rs.count_rate | stringformat:".1f" }} • {{ rs.count_product }} {% trans "reviews"%} <span style="color: red;">{{ rs.order_count }} • {% trans "Sold out"%}</span></span>
+                                        </a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price" style="font-size: 16px; color: white; background-color: #170f2f; border-radius: 5px; font-weight: 400; padding-right: 5px;  padding-left: 5px;">{{ rs.new_price }} {% trans "sum"%}</span>
+                                        <span class="old-price" style="margin-left: 10px; font-size: 14px">{{ rs.old_price }} {% trans "sum"%}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+            	</div>
+            </div>
+        </div>
+        {% endif %}
+        <br>
+        <div class="section" style="padding-top: 0;">
+        	<div class="container" style="width: 100%; padding-left: 0; padding-right: 0;">
+                <div class="row">
+                	 <div class="col-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                     	<p>
+                           <a>
+                              <img class="img-fluid blur-up lazyload" data-src="{% static 'assets/document/images/image-2.png'%}" src="{% static 'assets/document/images/image-2.png'%}" alt="feature-row__image" loading="lazy">
+                           </a>
+                        </p>
+                     </div>
+                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                     	<p>
+                           <a>
+                              <img class="img-fluid blur-up lazyload" data-src="{% static 'assets/document/images/image-22.png'%}" src="{% static 'assets/document/images/image-2.png'%}" alt="feature-row__image" loading="lazy">
+                           </a>
+                        </p>
+                     </div>
+                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                     	<p>
+                           <a>
+                              <img class="img-fluid blur-up lazyload" data-src="{% static 'assets/document/images/image-333.png'%}" src="{% static 'assets/document/images/image-333.png'%}" alt="feature-row__image" loading="lazy">
+                           </a>
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="store-feature section d-none d-lg-block" style="background-color: black;">
+        	<div class="container" style="max-width: 100%;">
+            	<div class="row">
+                	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    	<ul class="display-table store-info">
+                        	<li class="display-table-cell">
+                            	<i class="icon anm anm-truck-l" style="color: white;"></i>
+                            	<h5 style="color: white;">{% trans "Safe Delivery Service"%}</h5>
+                            	<span class="sub-text" style="color: white;">
+                            		{% trans "Free shipping all purchases"%}
+                            	</span>
+                            </li>
+                          	<li class="display-table-cell">
+                            	<i class="icon anm anm-money-bill-ar" style="color: white;"></i>
+                                <h5 style="color: white;">{% trans "Money Back Guarantee"%}</h5>
+                                <span class="sub-text" style="color: white;">
+                                	{% trans "Will be returned within 24/2 hours"%}
+                                </span>
+                          	</li>
+                          	<li class="display-table-cell">
+                            	<i class="icon anm anm-comments-l" style="color: white;"></i>
+                                <h5 style="color: white;">{% trans "24/7 Help Center"%}</h5>
+                                <span class="sub-text" style="color: white;">
+                                    {% trans "All your questions are answered"%}
+                                </span>
+                            </li>
+                            <li class="display-table-cell">
+                                <i class="icon anm anm-check-sql" style="color: white;"></i>
+                                <h5 style="color: white;">{% trans "Secure Payments"%}</h5>
+                                <span class="sub-text" style="color: white;">
+                                    {% trans "All payment are Secured and trusted"%}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section banner-image" style="padding: 0; background-color: black;">
+        	<img class="img-fluid banner-height" loading="lazy" src="{% static 'assets/document/images/ads-11.png'%}" alt="product" style="width: 100%;" />
+        </div>
+        <div class="section banner-image" style="padding: 0; background-color: black;">
+        	<img class="img-fluid banner-height" loading="lazy" src="{% static 'assets/document/images/brands/ads-12.png'%}" alt="" style="width: 100%;" />
+        </div>
+        <div class="section banner-image" style="padding: 0; background-color: black;">
+        	<img class="img-fluid banner-height" loading="lazy" src="{% static 'assets/document/images/brands/ads-3.png'%}" alt="" style="width: 100%;" />
+        </div>
+
+        <div class="section d-none d-lg-block" style="padding-top: 0; padding-bottom: 0;">
+        	<div class="hero hero--large hero__overlay bg-size">
+            	<img class="img-fluid bg-img blur-up" src="{% static 'assets/document/images/ads-1.png'%}" alt="" loading="lazy"/>
+            </div>
+            <div class="hero hero--large hero__overlay bg-size">
+            	<img class="img-fluid bg-img blur-up" src="{% static 'assets/document/images/ads-3.png'%}" alt="" loading="lazy"/>
+            </div>
+            <div class="hero hero--large hero__overlay bg-size">
+            	<img class="img-fluid bg-img blur-up" src="{% static 'assets/document/images/brands/Macbook.png'%}" alt="" loading="lazy"/>
+            </div>
+            <div class="hero hero--large hero__overlay bg-size">
+            	<img class="img-fluid bg-img blur-up" src="{% static 'assets/document/images/brands/canon-pro.png'%}" alt="" loading="lazy"/>
+            </div>
+        </div>
+        {% include 'small_templates/footer_slider.html'%}
+    </div>
+    <style>
+        @media only screen and (min-width: 1350px) {
+            .product-container {
+                width: 100%;
+                margin-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }}
+    </style>
+    {% include 'footer.html'%}
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+     <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/jquery.cookie.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/wow.min.js'%}"></script>
+     <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'assets/js/plugins.js'%}"></script>
+     <script src="{% static 'assets/js/popper.min.js'%}"></script>
+     <script src="{% static 'assets/js/lazysizes.js'%}"></script>
+     <script src="{% static 'assets/js/main.js'%}"></script>
+     <script src="{% static 'assets/owlcarousel/dist/owl.carousel.min.js'%}"></script>
+</body>
+</html>
+{% endif %}
+{% if info.status == 'Close' %}
+{% include 'error/coming-son.html'%}
+{% endif %}
+{% endfor %}
+{% endif %}

@@ -1,0 +1,79 @@
+{% load static %}
+{% load i18n %}
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog success-madal modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-check" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">{% trans "Great !"%}</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: #1f6200;">{% trans "Your message has been sent. Thank you !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ErrorModal" class="modal fade">
+    <div class="modal-dialog error-modal modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-exclamation-triangle" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">No !</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: red;">{% trans "Your message has not been sent !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById('contact');
+        if (form){
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const messages = document.getElementById('messages');
+            const csrf = document.getElementsByName('csrfmiddlewaretoken');
+            const url = 'http://127.0.0.1:8000/ContactUs/';
+            const contactus = new FormData();
+            contactus.append('csrfmiddlewaretoken', csrf[0].value);
+            contactus.append('name', name.value);
+            contactus.append('phone', phone.value);
+            contactus.append('messages', messages.value);
+            try {
+                const response = await axios.post(url, contactus, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+                if (response.status === 201) {
+                    console.log(response.data);
+                    setTimeout(() => {
+                        $('#myModal').modal('show');
+                        name.value = '';
+                        phone.value = '';
+                        messages.value = '';
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#myModal').modal('hide');
+                    }, 3500);
+                }
+            } catch (error) {
+                if (error.response.status === 400) {
+                    setTimeout(() => {
+                        $('#ErrorModal').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#ErrorModal').modal('hide');
+                    }, 3500);
+                }
+            }
+        });}
+    });
+</script>

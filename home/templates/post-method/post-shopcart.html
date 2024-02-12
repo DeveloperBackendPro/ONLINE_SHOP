@@ -1,0 +1,106 @@
+{% load static %}
+{% load i18n %}
+<div id="Success-Cart" class="modal fade">
+    <div class="modal-dialog success-madal modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-check" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">{% trans "Great !"%}</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: black;">{% trans "Your selected product has been successfully added to your shopping cart"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Error-Cart" class="modal fade">
+    <div class="modal-dialog error-modal modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-exclamation-triangle" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">No !</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: black;">{% trans "Your selected product was not added to the shopping cart, please try again !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById('add-cart');
+        if (form){
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const client = document.getElementById('client');
+            const color = document.querySelectorAll('.color-cart');
+            let selectedColor;
+            color.forEach((radio) => {
+                if (radio.checked) {
+                    selectedColor = radio.value;
+                }});
+            const product = document.getElementById('product_name');
+            const quantity = document.querySelector('.quantity');
+            const csrf = document.getElementsByName('csrfmiddlewaretoken');
+            const url = 'http://127.0.0.1:8000/ShopCart/';
+            const shopcart = new FormData();
+            shopcart.append('csrfmiddlewaretoken', csrf[0].value);
+            shopcart.append('client', client.value);
+            shopcart.append('color', selectedColor);
+            shopcart.append('product', product.value);
+            shopcart.append('quantity', quantity.value);
+            try {
+                const response = await axios.post(url, shopcart, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+                if (response.status === 201) {
+                    console.log(response.data);
+                    setTimeout(() => {
+                        $('#Success-Cart').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#Success-Cart').modal('hide');
+                        window.location.reload()
+                    }, 3500);
+                }
+            } catch (error) {
+                console.error(error);
+                setTimeout(() => {
+                    $('#Error-Cart').modal('show');
+                }, 1200);
+                setTimeout(() => {
+                    $('#Error-Cart').modal('hide');
+                }, 3500);
+            }
+        });}
+    });
+</script>
+<script>
+    const option_two = document.getElementById("product_name");
+    if (option_two) {
+        option_two.oninput = () => {
+            if (option_two.value !== '{{ product.id }}') {
+                option_two.value = '{{ product.id }}';
+            }
+        };
+        const config_all_two = {attributes: true, attributeOldValue: true};
+        const observer_all_two = new MutationObserver(mutationCallback);
+        function mutationCallback(mutations) {
+            mutations.forEach(function (record) {
+                option_two.setAttribute("value", "{{ product.id }}");
+            });
+            observer_all_two.disconnect();
+            startObserving(option_two);
+        }
+        function startObserving(nodes_all_two) {
+            observer_all_two.observe(nodes_all_two, config_all_two);
+        }
+    startObserving(option_two);
+    }
+</script>

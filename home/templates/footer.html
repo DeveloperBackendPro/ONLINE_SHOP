@@ -1,0 +1,43 @@
+{% load static %}
+{% load i18n %}
+<footer id="footer" style="padding-bottom: 0; margin-top: 0; padding-top: 0;">
+    <div class="site-footer">
+        <div class="container product-container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-9 footer-links">
+                        <h4 class="h4">{% trans "Location"%}</h4>
+                        <iframe src="{{ info.location }}" style="width: 100%;"></iframe>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
+                        <h4 class="h4">{% trans "Contact Us"%}</h4>
+                        <ul class="addressFooter">
+                            <li><i class="icon anm anm-map-marker-al"></i><p>{{ info.address }}</p></li>
+                            <li class="phone"><i class="icon anm anm-phone"></i><p>{{ info.phone }}</p></li>
+                            <li class="phone"><i class="icon anm anm-envelope"></i><p>{{ info.email }}</p></li>
+                            <li class="email"><i class="icon anm anm-clock"></i><p>{% trans "Working hours: 8.00 - 16.00"%}</p></li>
+                            <li class="email"><i class="icon anm anm-toggle-off"></i><p>{% trans "Day off: Saturday, Sunday"%}</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span>&copy; 2019 Online Shop.</span> All Rights Reserved.</div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
+                        <ul class="payment-icons list--inline">
+                            <li><i class="icon fa fa-cc-visa" aria-hidden="true" style="color: white;"></i></li>
+                            <li><i class="icon fa fa-cc-mastercard" aria-hidden="true" style="color: white;"></i></li>
+                            <li><i class="icon fa fa-cc-discover" aria-hidden="true" style="color: white;"></i></li>
+                            <li><i class="icon fa fa-cc-paypal" aria-hidden="true" style="color: white;"></i></li>
+                            <li><i class="icon fa fa-cc-amex" aria-hidden="true" style="color: white;"></i></li>
+                            <li><i class="icon fa fa-credit-card" aria-hidden="true" style="color: white;"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

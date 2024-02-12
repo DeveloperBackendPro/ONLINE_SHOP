@@ -1,0 +1,24 @@
+<script>
+    var previousTotalPrice = null;
+    var updateTimeout;
+    function fetchAndUpdateTotalPrice() {
+        axios.get('http://127.0.0.1:8000/PaymentPrice/{{ client.user.id }}/')
+            .then(function (response) {
+                var total_price = response.data.total_price;
+                if (total_price !== previousTotalPrice) {
+                    document.getElementById('totalPriceContainer').innerHTML = `${total_price} sum`;
+                    previousTotalPrice = total_price;
+                }
+            })
+            .catch(function (error) {
+                console.error('Error fetching total price', error);
+            });
+        }
+        function startUpdate() {
+            fetchAndUpdateTotalPrice();
+            updateTimeout = setTimeout(fetchAndUpdateTotalPrice, 1000);
+            setTimeout(function () {
+                clearTimeout(updateTimeout);
+            }, 5000);
+        }
+    </script>

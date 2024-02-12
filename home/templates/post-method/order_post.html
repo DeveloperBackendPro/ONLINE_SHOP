@@ -1,0 +1,136 @@
+{% load i18n %}
+<div id="Success-Cart" class="modal fade">
+    <div class="modal-dialog success-madal modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-check" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">{% trans "Great !"%}</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <p class="text-center" style="color: black;">{% trans "Thank you for your purchase. Your shopping cart has been emptied. You can view your purchased products in your personal account!" %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Error-Cart" class="modal fade">
+    <div class="modal-dialog error-modal modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-exclamation-triangle" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">No !</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="color: red;">{% trans "Your selected product was not added to the shopping cart, please try again !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Not-payed" class="modal fade">
+    <div class="modal-dialog error-payed modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-credit-card" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">No !</h4>
+            </div>
+            <div class="modal-body">
+                <p style="color: red; text-align: center;">{% trans "There are not enough funds in your personal account for your purchase, please top up your account !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="No-product" class="modal fade">
+    <div class="modal-dialog no-product modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-search" style="color: white;"></i>
+                </div>
+                <h4 class="modal-title w-100">{% trans "No Available !"%}</h4>
+            </div>
+            <div class="modal-body">
+                <p style="color: red; text-align: center;">{% trans "The product you want to buy is not available now !"%}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById('add-order');
+        if (form){
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const first_name = document.querySelector('#first_name');
+            const last_name = document.querySelector('#last_name');
+            const phone = document.querySelector('#phone');
+            const zip_code = document.querySelector('#zip_code');
+            const country = document.querySelector('#country');
+            const city = document.querySelector('#city');
+            const address = document.querySelector('#address');
+            const order_note = document.querySelector('#order_note');
+            const csrf = document.getElementsByName('csrfmiddlewaretoken');
+            const url = 'http://127.0.0.1:8000/OrderProduct/';
+            const order = new FormData();
+            order.append('csrfmiddlewaretoken', csrf[0].value);
+            order.append('first_name', first_name.value);
+            order.append('last_name', last_name.value);
+            order.append('phone', phone.value);
+            order.append('zip_code', zip_code.value);
+            order.append('country', country.value);
+            order.append('city', city.value);
+            order.append('address', address.value);
+            order.append('order_note', order_note.value);
+            try {
+                const response = await axios.post(url, order, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+                if (response.status === 201) {
+                    console.log(response.data);
+                    setTimeout(() => {
+                        $('#Success-Cart').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#Success-Cart').modal('hide');
+                        window.location.reload()
+                    }, 3500);
+                }
+            } catch (error) {
+                const status = error.response.status;
+                if (status === 400){
+                    setTimeout(() => {
+                        $('#Error-Cart').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#Error-Cart').modal('hide');
+                    }, 3500);
+                }
+                if (status === 406){
+                    setTimeout(() => {
+                        $('#Not-payed').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#Not-payed').modal('hide');
+                    }, 3500);
+                }
+                if (status === 404){
+                    setTimeout(() => {
+                        $('#No-product').modal('show');
+                    }, 1200);
+                    setTimeout(() => {
+                        $('#No-product').modal('hide');
+                    }, 3500);
+                }
+            }
+        });}
+    });
+</script>
+
+

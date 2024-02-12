@@ -1,0 +1,315 @@
+/*SUCCESS MADAL*/
+.success-madal {
+    color: #636363;
+    width: 370px;
+    font-size: 14px;
+}
+
+.success-madal .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.success-madal .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.success-madal h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+
+.success-madal .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.success-madal .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.success-madal .icon-box {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #82ce34;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.success-madal .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+.success-madal.modal-dialog {
+    margin-top: 80px;
+}
+
+.success-madal .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.success-madal .btn:hover,
+.success-madal .btn:focus {
+    background: #6fb32b;
+    outline: none;
+}
+
+/*Error Modal*/
+.error-modal {
+    color: #636363;
+    width: 370px;
+    font-size: 14px;
+}
+
+.error-modal .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.error-modal .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.error-modal h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+
+.error-modal .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.error-modal .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.error-modal .icon-box {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: red;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.error-modal .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+.error-modal.modal-dialog {
+    margin-top: 80px;
+}
+
+.error-modal .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.error-modal .btn:hover,
+.error-modal .btn:focus {
+    background: #6fb32b;
+    outline: none;
+}
+
+/*NOT PAYED*/
+.error-payed {
+    color: #636363;
+    width: 370px;
+    font-size: 14px;
+}
+
+.error-payed .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.error-payed .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.error-payed h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+
+.error-payed .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.error-payed .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.error-payed .icon-box {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: red;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.error-payed .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+.error-payed.modal-dialog {
+    /*margin-top: 80px;*/
+}
+
+.error-payed .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.error-payed .btn:hover,
+.error-payed .btn:focus {
+    background: #6fb32b;
+    outline: none;
+}
+
+/*NO PRODUCT*/
+.no-product {
+    color: #636363;
+    width: 370px;
+    font-size: 14px;
+}
+
+.no-product .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.no-product .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.no-product h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+
+.no-product .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.no-product .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.no-product .icon-box {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: red;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.no-product .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+.no-product.modal-dialog {
+    margin-top: 80px;
+}
+
+.no-product .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.no-product .btn:hover,
+.no-product .btn:focus {
+    background: #6fb32b;
+    outline: none;
+}

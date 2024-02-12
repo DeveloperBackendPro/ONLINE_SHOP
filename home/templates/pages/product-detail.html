@@ -1,0 +1,627 @@
+{% load static %}
+{% load i18n %}
+{% if info %}
+{% for info in info %}
+{% if info.status == 'Open' %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Savdo</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/product_detail.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+</head>
+<body class="template-product template-product-right-thumb" oncontextmenu="return false;">
+    {#HEADER START#}
+    <div class="pageWrapper">
+        <div class="top-header">
+            <div class="container product-container">
+                <div class="row">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <p class="phone-no"><i class="anm anm-phone"></i> {{ info.phone }}</p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                        <div class="text-center"><p class="top-header_middle-text">{% trans " Worldwide Express Shipping"%}</p></div>
+                    </div>
+                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                        <ul class="customer-links list-inline">
+                            <li>
+                                <div class="language-dropdown">
+                                    <span class="language-dd">{% trans "Language"%}</span>
+                                    <ul class="text-center" id="language" style="width: 100%; font-size: 16px;">
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/uz/product_detail/{{ product.code }}/'" style="cursor: pointer;">Uzb</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/en/product_detail/{{ product.code }}/'" style="cursor: pointer;">Eng</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/product_detail/{{ product.code }}/'" style="cursor: pointer;">Rus</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a onclick="window.location.href='{% url 'login_form'%}'" style="cursor: pointer;">{% trans "Login"%}</a></li>
+                            {% if user.is_authenticated and user.is_client %}
+                                <li><a onclick="window.location.href='{% url 'client'%}'" style="cursor: pointer;">{{ user.username }}</a></li>
+                            {% else %}
+                                <li><a onclick="window.location.href='{% url 'register'%}'" style="cursor: pointer;">{% trans "Create Account"%}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap animated d-flex border-bottom">
+            <div class="container product-container">
+                <div class="row align-items-center">
+                    <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                        <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                            <img src="{% static 'logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                        </a>
+                    </div>
+                    <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                        <div class="d-block d-lg-none">
+                            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                                <i class="anm anm-bars-r" style="color: black;"></i>
+                            </button>
+                        </div>
+                        <nav class="grid__item" id="AccessibleNav">
+                            <ul id="siteNav" class="site-nav medium center hidearrow">
+                                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                {% if category %}
+                                <li class="lvl1 parent dropdown"><a>{% trans "Category"%}<i class="anm anm-angle-down-l"></i></a>
+                                    <ul class="dropdown">
+                                        {% for rs in category %}
+                                        <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" class="site-nav" style="cursor: pointer;">{{ rs.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                {% endif %}
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}<i class="anm anm-angle-down-l"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                        <div class="logo">
+                            <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                                <img src="{% static 'assets/images/logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                        <div class="site-cart">
+                            {% if user.is_authenticated and user.is_client %}
+                                <a onclick="window.location.href='{% url 'shopcart'%}'" style="cursor: pointer;" title="Cart">
+                                    <i class="icon anm anm-bag-l" style="font-size: 22px;"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="site-header__search">
+                            <button onclick="window.location.href='{% url 'search'%}'" type="button" class="search-trigger" style="cursor: pointer;"><i class="icon anm anm-search-l"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav-wrapper" role="navigation">
+            <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i>{% trans "Close Menu"%}</div>
+            <ul id="MobileNav" class="mobile-nav">
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}</a></li>
+                <li class="lvl1 parent megamenu"><a>{% trans "Category"%}<i class="anm anm-plus-l"></i></a>
+                    {% if category %}
+                       <ul>
+                          {% for rs in category %}
+                          <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" style="cursor: pointer;" class="site-nav">{{ rs.title }}</a></li>
+                          {% endfor %}
+                       </ul>
+                    {% endif %}
+                </li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}</a></li>
+                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {#HEADER END#}
+    <br>
+    <br>
+	<div class="pageWrapper">
+        <div id="page-content">
+            <div id="MainContent" class="main-content" role="main">
+                <div id="ProductSection-product-template" class="product-container product-template__container prstyle1 container product-right-sidebar">
+                    <div class="product-single" style="margin-bottom: 0;">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+                                <div class="product-details-img">
+                                    <div class="zoompro-wrap product-zoom-right pl-20">
+                                        <div class="zoompro-span">
+                                            <img class="img-fluid zoompro blur-up lazyload" alt="{{ product.title }}" src="{{ product.image.url }}" title="{{ product.title }}" loading="lazy" style="height: 343px; width: 100%; object-fit: cover;"/>
+                                        </div>
+                                        <div class="product-labels rectangular"><span class="lbl pr-label1" style="background-color: red; color: white; font-weight: 600;">new</span></div>
+                                        <div class="product-buttons">
+                                            <a href="{{ product.image.url }}" class="btn prlightbox" title="{{ product.title }}"><i class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+        							<div class="product-thumb">
+                                        <div id="gallery" class="product-dec-slider-2 product-tab-left">
+                                            <a data-image="{{ product.image.url }}" data-zoom-image="{{ product.image.url }}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                                <img class="img-fluid blur-up lazyload" src="{{ product.image.url }}" alt="{{ product.title }}" loading="lazy" style="object-fit: cover;"/>
+                                            </a>
+                                            {% for rs in elements %}
+                                            {% if rs.image %}
+                                            <a data-image="{{ rs.image.url }}" data-zoom-image="{{ rs.image.url }}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                                <img class="blur-up lazyload img-fluid" src="{{ rs.image.url }}" alt="{{ product.title }}" loading="lazy"/>
+                                            </a>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-information">
+                                    <div class="product-single__meta">
+                                        <h1 class="product-single__title">{{ product.title }}</h1>
+                                        <div class="product-nav clearfix">
+                                            <a href="#" class="next" title="Next"><i class="fa fa-angle-right" aria-hidden="true" style="color: black;"></i></a>
+                                        </div>
+                                        <div class="prInfoRow">
+                                            <div class="product-stock"> <span class="instock ">In Stock - </span> <span class="outstock">{{ product.total_count }} </span> </div>
+                                            <div class="product-sku">SKU: <span class="variant-sku">{{ product.code }}-rdxs</span></div>
+                                            <div class="product-review">
+                                                <a class="reviewLink" href="#tab2">
+                                                    <i class="font-13 fa fa-star{% if product.count_rate < 1 %}-o empty{% endif %}"></i>
+                                                    <i class="font-13 fa fa-star{% if product.count_rate < 2 %}-o empty{% endif %}"></i>
+                                                    <i class="font-13 fa fa-star{% if product.count_rate < 3 %}-o empty{% endif %}"></i>
+                                                    <i class="font-13 fa fa-star{% if product.count_rate < 4 %}-o empty{% endif %}"></i>
+                                                    <i class="font-13 fa fa-star{% if product.count_rate < 5 %}-o empty{% endif %}"></i>
+                                                    <span class="spr-badge-caption" style="color: royalblue;">{{ product.count_rate | stringformat:".1f" }} • {{ product.count_product }} {% trans "reviews"%} {{ product.order_count }} - {% trans 'Sold out'%}</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="product-single__price product-single__price-product-template">
+                                            <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
+                                                <span id="ProductPrice-product-template"><span class="money" style="color: red;">{{ product.new_price }} {% trans "sum"%}</span></span>
+                                            </span>
+                                            <span class="discount-badge"> <span class="devider">|</span>&nbsp;
+                                                <span style="color: red;">{% trans "You Save"%}</span>
+                                                <span id="SaveAmount-product-template" class="product-single__save-amount">
+                                                {% if discount_percentage > 0 %}
+                                                <span class="money">(<span>{{ discount_percentage|floatformat:0 }}</span>%)</span>
+                                                 {% endif %}
+                                                </span>
+                                            </span>
+                                        </p>
+                                        <div class="orderMsg" id="quantity_message" style="border: 1px dashed red;">
+                                             <img src="{% static 'order-icon.jpg'%}" alt="">
+                                            <strong class="items" style="color: red;">{% trans "Hurry! Only"%} {{ total_amount }} {% trans "left in stock"%}</strong>
+                                            <strong class="time" style="color: red;">24 {% trans "Hours"%}</strong>
+                                        </div>
+                                        {% if user.is_authenticated and user.is_client %}
+                                        <form method="post" id="add-cart" class="product-form product-form-product-template hidedropdown">
+                                            {% csrf_token %}
+                                            <div class="swatch clearfix swatch-0 option1" data-option-index="0">
+                                                <div class="product-form__item">
+                                                    <label class="header"><strong>{% trans "Available colors"%}</strong></label>
+                                                  {% for rs in elements %}
+                                                      <div data-value="{{ rs.color }}" class="swatch-element color black available">
+                                                          <input class="swatchInput color-cart" id="swatch-{{ rs.color }}" type="radio" name="colar" value="{{ rs.color }}">
+                                                          <label class="swatchLbl color small" for="swatch-{{ rs.color }}" style="background-color:{{ rs.color }};" title="{{ rs.color }}"></label>
+                                                      </div>
+                                                  {% endfor %}
+                                                </div>
+                                            </div>
+                                            <div class="product-action clearfix">
+                                                <div class="product-form__item--quantity">
+                                                    <div class="wrapQtyBtn">
+                                                        <div class="qtyField">
+                                                            <a class="qtyBtn minus"><i class="fa anm anm-minus-r" aria-hidden="true" style="color: black;"></i></a>
+                                                            <input type="text" name="quantity" value="1" id="Number" min="1" max="25" class="product-form__input qty quantity">
+                                                            <a class="qtyBtn plus"><i class="fa anm anm-plus-r" aria-hidden="true" style="color: black;"></i></a>
+                                                            <input type="text" id="client" value="{{ client.id }}" hidden>
+                                                            <input type="text" id="product_name" value="{{ product.id }}" hidden>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-form__item--submit">
+                                                    <button type="submit" name="add" class="btn product-form__cart-submit" style="background-color: black;">
+                                                        <span id="AddToCartText-product-template">{% trans "Add To Cart"%}</span>
+                                                    </button>
+                                                </div>
+                                                <div id="rgb" style="width: 100%; height: 25px;"></div>
+                                            </div>
+                                        </form>
+                                        {% else %}
+                                            <div class="alert alert-info" role="alert" style="padding-top: 0;">
+                                                <h4 class="alert-heading text-center" style="font-size: 14px; margin: 0;"><i class="fa fa-bell fa-2x" style="color: #1681a9; padding-top: 5px;"></i></h4>
+                                                <p style="color: #0c5460; font-weight: 400; text-align: justify; font-family: Roboto Slab, Helvetica, Tahoma, Arial, serif; margin-bottom: 5px; padding-top: 5px;">{% trans "You can buy the product after registration ! Please register and enter your personal information, then you can transfer money to your account and purchase the product ! 🔔"%} <a onclick="window.location.href='{% url 'register'%}'" style="color: #1e347b; cursor: pointer;">{% trans "Registration"%}</a></p>
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%; height: 5px;"></div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                                <div class="prSidebar sidebar-product">
+                                    <div class="prFeatures" style="padding: 0;">
+                                        <div class="feature" style="margin-bottom: 36px;">
+                                            <img class="img-fluid" src="{% static 'assets/images/credit-card.png' %}" loading="lazy" alt="Safe Payment" title="Safe Payment" />
+                                            <div class="details"><p><strong style="color: black;">{% trans "Safe Payment"%}</strong></p>{% trans "Pay with the world's most payment methods"%}</div>
+                                        </div>
+                                        <div class="feature" style="margin-bottom: 36px;">
+                                            <img class="img-fluid" src="{% static 'assets/images/shield.png' %}" loading="lazy" alt="Confidence" title="Confidence" />
+                                            <div class="details"><p><strong style="color: black;">{% trans "Confidence"%}</strong></p>{% trans "Protection covers your purchase and personal data"%}</div>
+                                        </div>
+                                        <div class="feature" style="margin-bottom: 36px;">
+                                            <img class="img-fluid" src="{% static 'assets/images/worldwide.png' %}" loading="lazy" alt="Worldwide Delivery" title="Worldwide Delivery" />
+                                            <div class="details"><p><strong style="color: black;">{% trans "Worldwide Delivery"%}</strong></p>{% trans "FREE  fast shipping to over 200+ countries regions"%}</div>
+                                        </div>
+                                        <div class="feature" style="">
+                                            <img class="img-fluid" src="{% static 'assets/images/phone-call.png' %}" loading="lazy" alt="Hotline" title="Hotline" />
+                                            <div class="details"><p><strong style="color: black;">{% trans "Hotline"%}</strong></p>{% trans "Talk to help line for your question on 4141 456 789, 4125 666 888"%}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tabs-listing" style="padding-top: 0;">
+                                <ul class="product-tabs">
+                                    <li rel="tab1"><a class="tablink">{% trans "Product Details"%}</a></li>
+                                    <li rel="tab2"><a class="tablink">{% trans "Product Reviews"%}</a></li>
+                                </ul>
+                                <div class="tab-container product-container" style="padding: 0;">
+                                    <div id="tab1" class="tab-content">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                                              <div class="product-description rte" style="text-align: justify;">
+                                                  <p>{{ product.description_full | safe }}</p>
+                                              </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar popular-product" style="margin-top: 15px;">
+                                                <div class="related-product grid-products clearfix">
+                                                    <div class="grid">
+                                                        {% for rs in products_all %}
+                                                        <div class="grid__item">
+                                                          <div class="mini-list-item">
+                                                            <div class="mini-view_image">
+                                                                <a class="grid-view-item__link" onclick="window.location.href='{% url 'product_detail' rs.code %}'" style="cursor: pointer;">
+                                                                    <img class="img-fluid grid-view-item__image" src="{{ rs.image.url }}" alt="{{ rs.title }}" title="{{ rs.title }}" loading="lazy" style="object-fit: cover;">
+                                                                </a>
+                                                            </div>
+                                                            <div class="details">
+                                                                <a class="grid-view-item__title" onclick="window.location.href='{% url 'product_detail' rs.code %}'" style="cursor: pointer;">{{ rs.title | slice:"26" }}</a>
+                                                                <div class="grid-view-item__meta">
+                                                                    <span class="product-price__price">
+                                                                        <span class="money">{{ rs.new_price }} {% trans "sum"%}</span>
+                                                                        <del class="money" style="color: grey;">{{ rs.old_price }}</del>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="product-review">
+                                                                    <i class="font-13 fa fa-star{% if rs.count_rate < 1 %}-o empty{% endif %}"></i>
+                                                                    <i class="font-13 fa fa-star{% if rs.count_rate < 2 %}-o empty{% endif %}"></i>
+                                                                    <i class="font-13 fa fa-star{% if rs.count_rate < 3 %}-o empty{% endif %}"></i>
+                                                                    <i class="font-13 fa fa-star{% if rs.count_rate < 4 %}-o empty{% endif %}"></i>
+                                                                    <i class="font-13 fa fa-star{% if rs.count_rate < 5 %}-o empty{% endif %}"></i>
+                                                                    {{ rs.count_rate | stringformat:".1f" }} • {{ rs.count_product }}
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        {% endfor %}
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if comments %}
+                                    <div id="tab2" class="tab-content">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 option-one" style="padding-top: 10px;">
+                                                <div class="ratings-main">
+                                                    <div class="avg-rating d-flex-center mb-3">
+                                                        <h4 class="avg-mark" style="color: #2f415d;">{{ product.count_rate | stringformat:".1f" }}</h4>
+                                                        <div class="avg-content ms-3" style="margin-left: 20px;">
+                                                            <p class="text-rating" style="color: black;">{% trans "Average Rating"%}</p>
+                                                            <div class="ratings-full product-review">
+                                                                <a class="reviewLink d-flex-center">
+                                                                    <i class="icon anm anm-star{% if product.count_rate < 1 %}-o {% endif %}"></i>
+                                                                    <i class="icon anm anm-star{% if product.count_rate < 2 %}-o {% endif %}"></i>
+                                                                    <i class="icon anm anm-star{% if product.count_rate < 3 %}-o {% endif %}"></i>
+                                                                    <i class="icon anm anm-star{% if product.count_rate < 4 %}-o {% endif %}"></i>
+                                                                    <i class="icon anm anm-star{% if product.count_rate < 5 %}-o {% endif %}"></i>
+                                                                    <span class="caption ms-2" style="margin-left: 10px;">{{ product.count_product }} {% trans "Comments"%}</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ratings-list">
+                                                        <div class="ratings-container d-flex align-items-center mt-1">
+                                                            <div class="ratings-full product-review m-0">
+                                                                <a class="reviewLink d-flex align-items-center" href="#">
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_5|floatformat:0 }}%;"></div></div>
+                                                            <div class="progress-value">{{ only_5|floatformat:0 }}%</div>
+                                                        </div>
+                                                        <div class="ratings-container d-flex align-items-center mt-1">
+                                                            <div class="ratings-full product-review m-0">
+                                                                <a class="reviewLink d-flex align-items-center">
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_4|floatformat:0 }}%;"></div>
+                                                            </div>
+                                                            <div class="progress-value">{{ only_4|floatformat:0 }}%</div>
+                                                        </div>
+                                                        <div class="ratings-container d-flex align-items-center mt-1">
+                                                            <div class="ratings-full product-review m-0">
+                                                                <a class="reviewLink d-flex align-items-center">
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_3|floatformat:0 }}%;"></div>
+                                                            </div>
+                                                            <div class="progress-value">{{ only_3|floatformat:0 }}%</div>
+                                                        </div>
+                                                        <div class="ratings-container d-flex align-items-center mt-1">
+                                                            <div class="ratings-full product-review m-0">
+                                                                <a class="reviewLink d-flex align-items-center">
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_2|floatformat:0 }}%;"></div>
+                                                            </div>
+                                                            <div class="progress-value">{{ only_2|floatformat:0 }}%</div>
+                                                        </div>
+                                                        <div class="ratings-container d-flex align-items-center mt-1">
+                                                            <div class="ratings-full product-review m-0">
+                                                                <a class="reviewLink d-flex align-items-center">
+                                                                    <i class="icon anm anm-star"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                    <i class="icon anm anm-star-o"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:{{ only_1|floatformat:0 }}%;"></div>
+                                                            </div>
+                                                            <div class="progress-value">{{ only_1|floatformat:0 }}%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="spr-reviews" style="padding: 0;">
+                                                    <div class="review-inner">
+                                                        {% for item in comments %}
+                                                            <div class="spr-review d-flex w-100" style="border-bottom: none;">
+                                                                <div class="spr-review-profile flex-shrink-0">
+                                                                    <svg data-jdenticon-value="user{{ item.name }}" style="border-radius: 50%;"></svg>
+                                                                </div>
+                                                                <div class="spr-review-content flex-grow-1" style="margin: 0;">
+                                                                    <div class="d-flex justify-content-between flex-column mb-2">
+                                                                        <div class="title-review d-flex align-items-center justify-content-between">
+                                                                            <h5 class="spr-review-header-title text-transform-none mb-0">{{ item.name | slice:"50"}}</h5>
+                                                                            <span class="product-review spr-starratings m-0">
+                                                                                <span class="reviewLink">
+                                                                                    <i class="icon anm anm-star{% if item.rate < 1 %}-o{% endif %}"></i>
+                                                                                    <i class="icon anm anm-star{% if item.rate < 2 %}-o{% endif %}"></i>
+                                                                                    <i class="icon anm anm-star{% if item.rate < 3 %}-o{% endif %}"></i>
+                                                                                    <i class="icon anm anm-star{% if item.rate < 4 %}-o{% endif %}"></i>
+                                                                                    <i class="icon anm anm-star{% if item.rate < 5 %}-o{% endif %}"></i>
+                                                                                </span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <b class="head-font">{{ item.create_at }}</b>
+                                                                    <p class="spr-review-body">
+                                                                        {{ item.text | slice:"167" }}...
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 option-two" style="padding-top: 10px;">
+                                                <form method="post" id="p-form" autocomplete="off" class="product-review-form new-review-form" style="padding-left: 20px; padding-right: 20px;">
+                                                    {% csrf_token %}
+                                                    <h2>{% trans "Leave a comment"%}</h2>
+                                                    <fieldset class="row spr-form-contact">
+                                                        <div class="col-sm-6 spr-form-contact-name form-group">
+                                                            <label class="spr-form-label" for="nickname">{% trans 'Full-Name'%}
+                                                                <span class="required">*</span>
+                                                            </label>
+                                                            <input class="spr-form-input spr-form-input-text" id="name" type="text" name="name" required/>
+                                                        </div>
+                                                        <div class="col-sm-6 spr-form-contact-email form-group">
+                                                            <label class="spr-form-label" for="email">{% trans "Phone"%}
+                                                                <span class="required">*</span>
+                                                            </label>
+                                                            <input class="spr-form-input spr-form-input-email " id="phone" type="text" name="email" required/>
+                                                        </div>
+                                                        <div class="col-sm-6 spr-form-review-title form-group" hidden>
+                                                            <label class="spr-form-label" for="review">Product
+                                                                <span class="required">*</span>
+                                                            </label>
+                                                            <input class="spr-form-input spr-form-input-text " id="product" value="{{ product.id }}" type="text" name="review"/>
+                                                        </div>
+                                                        <div class="col-sm-6 spr-form-review-rating form-group">
+                                                            <div class="product-review">
+                                                                <div class="rating">
+                                                                    <input class="rate" type="radio" id="star5" name="rating" value="5" />
+                                                                    <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                                                                    <input class="rate" type="radio" id="star4" name="rating" value="4" />
+                                                                    <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                                                                    <input class="rate" type="radio" id="star3" name="rating" value="3" />
+                                                                    <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                                                                    <input class="rate" type="radio" id="star2" name="rating" value="2" />
+                                                                    <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                                                                    <input class="rate" type="radio" id="star1" name="rating" value="1" />
+                                                                    <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 spr-form-review-body form-group">
+                                                            <label class="spr-form-label" for="message">
+                                                                {% trans "Body of Comment"%}
+                                                            </label>
+                                                            <div class="spr-form-input">
+                                                                <textarea class="spr-form-input spr-form-input-textarea" id="text" name="message" rows="8"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <div class="spr-form-actions clearfix">
+                                                        <button type="submit" class="btn btn-primary spr-button spr-button-primary" style="background-color: black;">{% trans "Submit"%}</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                        <div id="tab2" class="tab-content" style="padding-top: 25px; padding-bottom: 10px;">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <button class="btn" data-toggle="modal" data-target="#exampleModalCenter" style="width: 100%; background-color: black;">{% trans "write reviews"%}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                <div class="modal-content" style="background-color: transparent; border: none;">
+                                                    <form method="post" autocomplete="off" id="p-form" accept-charset="UTF-8" class="comment-form">
+                                                        {% csrf_token %}
+                                                        <h2>{% trans "Leave a comment"%}</h2>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" id="name" name="name" placeholder="Ravshan">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="+998(9*)***-**-**">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6" hidden>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" value="{{ product.id }}" id="product" name="product">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 spr-form-review-rating form-group" style="margin: 0; padding-bottom: 0; padding-left: 10px; padding-right: 0; padding-top: 0;">
+                                                                <div class="product-review">
+                                                                    <div class="rating">
+                                                                        <input class="rate" type="radio" id="star5" name="rating" value="5" />
+                                                                        <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                                                                        <input class="rate" type="radio" id="star4" name="rating" value="4" />
+                                                                        <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                                                                        <input class="rate" type="radio" id="star3" name="rating" value="3" />
+                                                                        <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                                                                        <input class="rate" type="radio" id="star2" name="rating" value="2" />
+                                                                        <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                                                                        <input class="rate" type="radio" id="star1" name="rating" value="1" />
+                                                                        <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <textarea rows="4" id="text" name="comment" placeholder="{% trans "Your Message"%}"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <button type="submit" class="btn">{% trans "Submit"%}</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .zoomContainer {
+            display: none;
+        }
+        @media only screen and (min-width: 1350px) {
+            .product-container {
+                width: 100%;
+                margin-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        #p-form {
+            padding: 20px;
+            border: 1px solid #e8e9eb;
+            background: #f5f5f5;
+            margin-top: 40px;
+        }
+        #p-form input[type="text"], #p-form input[type="text"], #p-form textarea {
+            background: #fff;
+        }
+    </style>
+     {% include 'post-method/comment_post.html' %}
+     {% include 'post-method/post-shopcart.html' %}
+     {% include 'small_templates/footer_slider.html'%}
+     {% include 'footer.html' %}
+     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+     <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/jquery.cookie.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/wow.min.js' %}"></script>
+     <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'assets/js/plugins.js' %}"></script>
+     <script src="{% static 'assets/js/popper.min.js' %}"></script>
+     <script src="{% static 'assets/js/lazysizes.js' %}"></script>
+     <script src="{% static 'assets/js/main.js' %}"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.2.0/dist/jdenticon.min.js" async></script>
+</body>
+</html>
+{% endif %}
+{% if info.status == 'Close' %}
+{% include 'error/coming-son.html'%}
+{% endif %}
+{% endfor %}
+{% endif %}

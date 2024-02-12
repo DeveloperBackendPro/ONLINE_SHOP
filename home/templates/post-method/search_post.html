@@ -1,0 +1,85 @@
+{% load static %}
+{% load i18n %}
+<script>
+    $(document).ready(function () {
+    const title = $('#title');
+    const result = $('#result');
+    const csrf = $('input[name=csrfmiddlewaretoken]').val();
+    const sendSearchData = _.debounce((query) => {
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:8000/search_product/',
+            data: {
+                'csrfmiddlewaretoken': csrf,
+                'title': query,
+            },
+            success: (res) => {
+                const data = res.data;
+                if (Array.isArray(data) && data.length > 0) {
+                    result.empty();
+                    data.forEach((item) => {
+                        const starIcons = Array.from({ length: 5 }, (_, index) => {
+                            const filledClass = index < item.count_rate ? '' : '-o empty';
+                            return `<i class="font-13 fa fa-star${filledClass}"></i>`;
+                        }).join('');
+                        result.append(`
+                                <div class="col-6 col-sm-6 col-md-4 col-lg-3 item" style='display: block;'>
+                                    <div class="product-image">
+                                        <a onclick="window.location.href='http://127.0.0.1:8000/uz/product_detail/${item.code}/'" style="cursor: pointer;">
+                                            <img class="blur-up lazyload" data-src="${item.image}" src="${item.image}" alt="${item.title}" title="${item.title}">
+                                            <div class="product-labels rectangular"><span class="lbl pr-label1" style="background-color: red; color: white; font-weight: 600;">new</span></div>
+                                        </a>
+                                        <div class="variants add" onclick="window.location.href='http://127.0.0.1:8000/uz/product_detail/${item.code}/'">
+                                            <button class="btn btn-addto-cart" type="button">{% trans "Add To Cart"%}</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-details" style="text-align: justify;">
+                                        <div class="product-name">
+                                            <a href="#" style="color: white; overflow: hidden;">${item.title.substring(0, 39)}</a>
+                                        </div>
+                                        <div class="product-review">
+                                            <a class="reviewLink">
+                                                ${starIcons}
+                                                <span class="spr-badge-caption info-grade" style="color: white;">${item.count_rate.toFixed(1)} • ${item.count_product} {% trans 'reviews'%} <span style="color: red;">${item.order_count} • {% trans 'Sold out'%}</span></span>
+                                            </a>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price" style="font-size: 16px; color: white; background-color: #170f2f; border-radius: 5px; font-weight: 400; padding-right: 5px;  padding-left: 5px;">${item.new_price} {% trans 'sum'%}</span>
+                                            <span class="old-price" style="margin-left: 10px; font-size: 14px; color: white;">${item.old_price} {% trans 'sum'%}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                        `);
+                    });
+                } else {
+                    if (query.length === 0) {
+                        result.empty();
+                    } else {
+                        result.empty();
+                    }
+                }
+            },
+            error: (err) => {
+                console.log(err);
+            },
+        });
+    }, 300);
+    title.on('keyup', function (e) {
+        const query = $(this).val();
+        if (result.hasClass('not-visible')) {
+            result.removeClass('not-visible');
+        }
+        sendSearchData(query);
+    });
+ });
+</script>
+ <script>
+     var intervalId = setInterval(function () {
+         document.getElementById('title').value = 'iphone';
+         var event = new Event('keyup');
+         document.getElementById('title').dispatchEvent(event);
+     }, 800);
+     setTimeout(function () {
+         clearInterval(intervalId);
+     }, 1000);
+ </script>

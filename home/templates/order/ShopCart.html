@@ -1,0 +1,263 @@
+{% load static %}
+{% load i18n %}
+{% if info %}
+{% for info in info %}
+{% if info.status == 'Open' %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'register/register.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/document/styles/style.css'%}">
+</head>
+<body class="page-template belle cart-variant1" oncontextmenu="return false;">
+<div class="pageWrapper">
+     <div class="space" style="width: 100%; height: 1px;">
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+     </div>
+     {#HEADER START#}
+    <div class="pageWrapper">
+        <div class="top-header">
+            <div class="container product-container">
+                <div class="row">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <p class="phone-no"><i class="anm anm-phone"></i> {{ info.phone }}</p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                        <div class="text-center"><p class="top-header_middle-text">{% trans " Worldwide Express Shipping"%}</p></div>
+                    </div>
+                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                        <ul class="customer-links list-inline">
+                            <li>
+                                <div class="language-dropdown">
+                                    <span class="language-dd">{% trans "Language"%}</span>
+                                    <ul class="text-center" id="language" style="width: 100%; font-size: 16px;">
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/uz/shopcart/'" style="cursor: pointer;">Uzb</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/en/shopcart/'" style="cursor: pointer;">Eng</li>
+                                        <li onclick="window.location.href='http://127.0.0.1:8000/shopcart/'" style="cursor: pointer;">Rus</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a onclick="window.location.href='{% url 'login_form'%}'" style="cursor: pointer;">{% trans "Login"%}</a></li>
+                            {% if user.is_authenticated and user.is_client %}
+                                <li><a onclick="window.location.href='{% url 'client'%}'" style="cursor: pointer;">{{ user.username }}</a></li>
+                            {% else %}
+                                <li><a onclick="window.location.href='{% url 'register'%}'" style="cursor: pointer;">{% trans "Create Account"%}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap animated d-flex border-bottom">
+            <div class="container product-container">
+                <div class="row align-items-center">
+                    <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                        <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                            <img src="{% static 'logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                        </a>
+                    </div>
+                    <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                        <div class="d-block d-lg-none">
+                            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                                <i class="anm anm-bars-r" style="color: black;"></i>
+                            </button>
+                        </div>
+                        <nav class="grid__item" id="AccessibleNav">
+                            <ul id="siteNav" class="site-nav medium center hidearrow">
+                                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                {% if category %}
+                                <li class="lvl1 parent dropdown"><a>{% trans "Category"%}<i class="anm anm-angle-down-l"></i></a>
+                                    <ul class="dropdown">
+                                        {% for rs in category %}
+                                        <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" class="site-nav" style="cursor: pointer;">{{ rs.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                {% endif %}
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}<i class="anm anm-angle-down-l"></i></a></li>
+                                <li class="lvl1 parent dropdown"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}<i class="anm anm-angle-down-l"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                        <div class="logo">
+                            <a onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">
+                                <img src="{% static 'assets/images/logo.svg'%}" alt="Online-Shop" title="Online-Shop" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                        <div class="site-cart">
+                            {% if user.is_authenticated and user.is_client %}
+                                <a onclick="window.location.href='{% url 'shopcart'%}'" style="cursor: pointer;" title="Cart">
+                                    <i class="icon anm anm-bag-l" style="font-size: 22px;"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="site-header__search">
+                            <button onclick="window.location.href='{% url 'search'%}'" type="button" class="search-trigger" style="cursor: pointer;"><i class="icon anm anm-search-l"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav-wrapper" role="navigation">
+            <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i>{% trans "Close Menu"%}</div>
+            <ul id="MobileNav" class="mobile-nav">
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'main'%}'" style="cursor: pointer;">{% trans "Home"%}</a></li>
+                <li class="lvl1 parent megamenu"><a>{% trans "Category"%}<i class="anm anm-plus-l"></i></a>
+                    {% if category %}
+                        <ul>
+                          {% for rs in category %}
+                          <li><a onclick="window.location.href='{% url 'filter_products' rs.code %}'" style="cursor: pointer;" class="site-nav">{{ rs.title }}</a></li>
+                          {% endfor %}
+                       </ul>
+                    {% endif %}
+                </li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'aboutus'%}'" style="cursor: pointer;">{% trans "About us"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'newshop'%}'" style="cursor: pointer;">{% trans "News"%}</a></li>
+                <li class="lvl1 parent megamenu"><a  onclick="window.location.href='{% url 'faq'%}'" style="cursor: pointer;">{% trans "Faq"%}</a></li>
+                <li class="lvl1 parent megamenu"><a onclick="window.location.href='{% url 'contact'%}'" style="cursor: pointer;">{% trans "Contact"%}</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {#HEADER END#}
+    {% if shopcart %}
+    <div id="page-content" style="background-color: #221446">
+        <br>
+        <div class="container product-container">
+        	<div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                	<div class="alert alert-success text-uppercase" role="alert">
+						<i class="icon anm anm-truck-l icon-large"></i> &nbsp;<strong>{% trans "Congratulations!"%}</strong> {% trans "You've got free shipping!"%}
+					</div>
+                	<div class="cart style2">
+                		<table>
+                            <thead class="cart__row cart__header">
+                                <tr>
+                                    <th class="text-center" style="background-color: #221446; color: white;">{% trans "Image"%}</th>
+                                    <th class="text-center" style="background-color: #221446; color: white;">{% trans "Product"%}</th>
+                                    <th class="text-center" style="background-color: #221446; color: white;">{% trans "Real Price"%}</th>
+                                    <th class="text-right" style="background-color: #221446; color: white;">{% trans "Total"%}</th>
+                                    <th class="text-right" style="background-color: #221446; color: white;">{% trans "Color"%}</th>
+                                    <th class="text-center" style="background-color: #221446; color: white;">{% trans "Delete"%}</th>
+                                </tr>
+                            </thead>
+                    		<tbody>
+                                {% for item in shopcart %}
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__image-wrapper cart-flex-item">
+                                        <a onclick="window.location.href='{% url 'product_detail' item.product.code %}'" style="cursor: pointer;">
+                                            <img class="img-fluid cart__image" src="{{ item.product.image.url }}" title="{{ item.product.title }}" alt="{{ item.product.title }}" loading="lazy">
+                                        </a>
+                                    </td>
+                                    <td class="cart__meta small--text-left cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <a onclick="window.location.href='{% url 'product_detail' item.product.code %}'" style="color: white; cursor: pointer;">{{ item.product.title }}</a>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item">
+                                        <span class="money" style="color: white;">{{ item.product.new_price }} {% trans "sum"%}</span>
+                                    </td>
+                                     <td class="cart__price-wrapper cart-flex-item small--hide">
+                                        <span class="money" style="color: white;">{{ item.quantity }}</span>
+                                    </td>
+                                    <td class="cart__image-wrapper small--hide">
+                                        <a onclick="window.location.href='{% url 'product_detail' item.product.code %}'" style="display: flex; justify-content: center; align-items: center; cursor: pointer;">
+                                            <div style="background-color: {{ item.color }}; width: 20px; height: 20px;"></div>
+                                        </a>
+                                    </td>
+                                    <td class="text-center small--hide">
+                                        <a onclick="window.location.href='{% url 'delete_cart' item.id %}'" style="cursor: pointer; background-color: #221446; color: white;" class="btn btn--secondary cart__remove">
+                                            <i class="icon icon anm anm-times-l"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                    		<tfoot>
+                                <tr>
+                                    <td colspan="3" class="text-left small--hide"></td>
+                                    <td colspan="3" class="text-center">
+	                                    <a onclick="window.location.href='{% url 'order'%}'">
+                                            <button class="btn btn-secondary">{% trans "Continue shopping Total"%} {{ total }} {% trans "sum"%}</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+               	</div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div style="background-color: #221446; padding-top: 80px; padding-bottom: 80px;">
+        <section id="register" style="border: 0.600em solid navy;">
+            <form>
+                <fieldset>
+                    <legend style="color: black; text-align: center;">{% trans 'Warning' %}</legend>
+                    <div class="input-group">
+                        <div class="col-lg-12">
+                            <p style="text-align: center; color: black; font-size: 16px;">{% trans 'You have not added any products to the shopping cart yet! or because you deleted the Cart is empty !'%}</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+    {% endif %}
+</div>
+     <style>
+        @media only screen and (min-width: 1350px) {
+            .product-container {
+                width: 100%;
+                margin-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }}
+    </style>
+     {% include 'small_templates/footer_slider.html'%}
+     {% include 'footer.html'%}
+     <div class="space" style="width: 100%; height: 1px; background-color: black;">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+     </div>
+     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+     <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/jquery.cookie.js' %}"></script>
+     <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/wow.min.js'%}"></script>
+     <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'assets/js/plugins.js'%}"></script>
+     <script src="{% static 'assets/js/popper.min.js'%}"></script>
+     <script src="{% static 'assets/js/lazysizes.js'%}"></script>
+     <script src="{% static 'assets/js/main.js'%}"></script>
+</body>
+</html>
+{% endif %}
+{% if info.status == 'Close' %}
+{% include 'error/coming-son.html'%}
+{% endif %}
+{% endfor %}
+{% endif %}

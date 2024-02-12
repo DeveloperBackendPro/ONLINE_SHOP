@@ -1,0 +1,36 @@
+#payment-account h4 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2
+}
+#payment-account h4 {
+    font-size: calc(1.275rem + .3vw)
+}
+#payment-account p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+@media only screen and (max-width: 1200px) {
+    .col-xl-9 {
+        padding-top: 20px;
+    }
+}
+
+a:hover, a:focus {
+    opacity: 1;
+}
+
+.table td {
+    vertical-align: sub;
+}
+
+.table > :not(caption) > * > * {
+    border-bottom: 0;
+}
+
+.table td {
+    white-space: normal;
+    border-top: 0;
+}
